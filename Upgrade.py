@@ -8,12 +8,12 @@
 #     Made for usage in DrawBot, www.drawbot.com
 # -----------------------------------------------------------------------------
 #
-#     DesignDesignSpace.py
+#     Upgrade.py
 #
 #     Build automatic website for designdesign.space, hosted in github.
 #
-#     http://designdesign.space
-#     http://localhost:8888/designdesignspace/index.html
+#     http://upgrade.typetr.com
+#     http://localhost:8888/typetr/index.html
 #
 #
 # 
@@ -29,15 +29,16 @@ from pagebot.conditions import *
 
 # Path to markdown file, including Python code blocks.
 MD_PATH = u"Site.md"
-NAME = 'designdesignspace'
-DOMAIN = 'designdesign.space'
+NAME = 'upgrade'
+DOMAIN = 'upgrade.typetr.com'
 
-DO_GIT = True
+DO_GIT = False
 DO_MAMP = not DO_GIT
 
-from pagebot.publications import Website
+from website import Website
 
 doc = Website(autoPages=0)
+doc.info.cssPath = 'sources/assets/css/main.css'
 
 # Create a Typesetter for this document, then create pages and fill content. 
 # As no Galley instance is supplied to the Typesetter, it will create one,
@@ -52,7 +53,6 @@ t.typesetFile(MD_PATH)
 
 if DO_MAMP:
     # Internal CSS file may be switched of for development.
-    t.doc.info.cssPath = 'sources/pagebot.css'
     view = t.doc.setView('Mamp')
 
     if not os.path.exists(view.MAMP_PATH):
@@ -64,7 +64,6 @@ if DO_MAMP:
         os.system(u'open "%s"' % view.getUrl(NAME))
 elif DO_GIT:
     # Make sure outside always has the right generated CSS
-    t.doc.info.cssPath = 'sources/pagebot.css'
     view = t.doc.setView('Git')
     t.doc.build(path=NAME)
     # Open the css file in the default editor of your local system.
