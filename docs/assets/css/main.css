@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic");
-@import url("font-awesome.min.css");
+@import url("font-upgrade.css");
 
 /*
 	Apex by Pixelarity
@@ -1069,14 +1069,14 @@
 /* Basic */
 
 	body, input, textarea {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
+		font-family: 'TYPETR-Upgrade-Regular', sans-serif;
+		font-weight: normal;
 	}
 
 	body {
 		background: #fff;
 		color: #474747;
-		font-size: 10pt;
+		font-size: 13pt;
 		line-height: 1.75em;
 	}
 
@@ -1090,12 +1090,13 @@
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-family: TYPETR-Upgrade-Medium;
+		font-weight: normal;
 		color: #373737;
 	}
 
-	h3 {
-		font-weight: 400;
+	h3 {		
+		font-family: TYPETR-Upgrade-Semibold;
 		margin: 0 0 0.5em 0;
 	}
 
@@ -1174,7 +1175,7 @@
 
 		.blocks a:after {
 			content: "\f0a9";
-			font-family: FontAwesome;
+			font-family: TYPETR-Upgrade-Regular;
 			text-decoration: none;
 			font-size: 55px;
 			font-style: normal;
@@ -1197,7 +1198,7 @@
 	.blocks h2 {
 		color: #fff;
 		font-size: 2.25em;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 		margin: 0 0 0.5em 0;
 		line-height: 1em;
 	}
@@ -1279,7 +1280,7 @@
 	}
 
 		ul.contact li:before {
-			font-family: FontAwesome;
+			font-family: TYPETR-Upgrade-Regular;
 			font-size: 1.25em;
 			text-decoration: none;
 			font-style: normal;
@@ -1351,7 +1352,7 @@
 
 		.icon:before {
 			display: inline-block;
-			font-family: FontAwesome;
+			font-family: TYPETR-Upgrade-Regular;
 			font-size: 1.25em;
 			text-decoration: none;
 			font-style: normal;
@@ -1369,7 +1370,7 @@
 
 			h2 {
 				font-size: 2.25em;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 				margin: 0 0 1.5em 0;
 			}
 
@@ -1444,7 +1445,7 @@
 
 				#page-header h1 {
 					font-size: 2em;
-					letter-spacing: -2px;
+					letter-spacing: 0;
 				}
 
 					#page-header h1 a {
@@ -1452,7 +1453,8 @@
 					}
 
 					#page-header h1 span {
-						font-weight: 400;
+						font-family: TYPETR-Upgrade-Semibold;
+						font-weight: normal;
 					}
 
 				#page-header a {
@@ -1571,7 +1573,7 @@
 				}
 
 					#banner .nav-next:before, #banner .nav-previous:before {
-						font-family: FontAwesome;
+						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 72px;
 						font-style: normal;
@@ -1621,7 +1623,7 @@
 
 					#banner .captions:after {
 						content: "\f0a9";
-						font-family: FontAwesome;
+						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 55px;
 						font-style: normal;
@@ -1641,14 +1643,14 @@
 					#banner .captions .caption-line-1 {
 						display: block;
 						font-size: 3em;
-						letter-spacing: -3px;
+						letter-spacing: 0;
 						margin: 0 0 0.75em 0;
 					}
 
 					#banner .captions .caption-line-2 {
 						display: block;
 						font-size: 1.5em;
-						letter-spacing: -1px;
+						letter-spacing: 0;
 						line-height: 1.5em;
 						color: rgba(255, 255, 255, 0.8);
 					}
@@ -1714,7 +1716,7 @@
 
 					#search form:before {
 						content: "\f002";
-						font-family: FontAwesome;
+						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 18px;
 						font-style: normal;
@@ -1762,27 +1764,28 @@
 
 			#content section.featured header .byline, #content article.featured header .byline {
 				font-size: 2em;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 			}
 
 			#content section.featured header h2, #content article.featured header h2 {
 				font-size: 4em;
-				letter-spacing: -3px;
+				letter-spacing: 0;
 				margin: 0.25em 0 0.75em 0;
 			}
 
 			#content section.featured h3, #content article.featured h3 {
 				font-size: 1.5em;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 				margin: 0 0 1em 0;
-				font-weight: 200;
+				font-family: TYPETR-Upgrade-Light;
+				font-weight: normal;
 			}
 
 		/* Sidebar */
 
 			#sidebar h2 {
 				font-size: 1.75em;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 			}
 
 			#sidebar > section {
@@ -1805,7 +1808,7 @@
 
 			#sidebar section.featured header h2 {
 				font-size: 4em;
-				letter-spacing: -3px;
+				letter-spacing: 0;
 				margin: 0.25em 0 0.75em 0;
 			}
 
@@ -1813,7 +1816,7 @@
 
 			#page-footer h2 {
 				font-size: 1.75em;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 			}
 
 			#page-footer section {
@@ -1904,7 +1907,7 @@
 
 			#page-header h1 {
 				font-size: 1.5em;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 			}
 
 			#page-header nav ul li {
@@ -1945,12 +1948,12 @@
 
 					#banner .captions .caption-line-1 {
 						font-size: 2.5em;
-						letter-spacing: -2px;
+						letter-spacing: 0;
 					}
 
 					#banner .captions .caption-line-2 {
 						font-size: 1.25em;
-						letter-spacing: -1px;
+						letter-spacing: 0;
 						line-height: 1.25em;
 					}
 
@@ -2000,7 +2003,7 @@
 			h2 {
 				font-size: 1.5em;
 				margin: 0 0 1.5em 0;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 			}
 
 			section, article {
@@ -2031,12 +2034,12 @@
 
 			section.featured header .byline, article.featured header .byline {
 				font-size: 1.5em;
-				letter-spacing: -1px;
+				letter-spacing: 0;
 			}
 
 			section.featured header h2, article.featured header h2 {
 				font-size: 2em;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 				margin: 0.25em 0 0.75em 0;
 				line-height: 1em;
 			}
@@ -2161,12 +2164,13 @@
 					display: block;
 					text-align: center;
 					font-size: 1.25em;
-					letter-spacing: -1px;
+					letter-spacing: 0;
 					line-height: 44px;
 				}
 
 					#titleBar .title span {
-						font-weight: 400;
+						font-weight: normal;
+						font-family: TYPETR-Upgrade-Semibold;
 					}
 
 				#titleBar .toggle {
@@ -2304,7 +2308,7 @@
 				}
 
 					#banner .nav-next:before, #banner .nav-previous:before {
-						font-family: FontAwesome;
+						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 72px;
 						font-style: normal;
@@ -2352,7 +2356,7 @@
 
 					#banner .captions .caption-line-1 {
 						font-size: 1.5em;
-						letter-spacing: -1px;
+						letter-spacing: 0;
 						display: block;
 						margin: 0 0 0.5em 0;
 					}
@@ -2417,7 +2421,7 @@
 
 					#search form:before {
 						content: "\f002";
-						font-family: FontAwesome;
+						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 18px;
 						font-style: normal;
