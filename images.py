@@ -168,14 +168,27 @@ def image6(w, h):
     restore()
     
 def image7(w, h):
+    LIGHTS = (
+        'Upgrade-Hairline',        'Upgrade-Thin',        'Upgrade-ExtraLight',        'Upgrade-Light',        'Upgrade-Book')
+    LIGHTS2 = (
+        'Upgrade-Thin',        'Upgrade-ExtraLight',        'Upgrade-Light',        'Upgrade-Book')
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
+    r, g, b = 0.3*random(),0.3*random(),0.3*random()
+    fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('I#7', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
+    fs = FormattedString('Q', font='Upgrade-Thin', fontSize=h*3/4, fill=(1,1,1,0.95))
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
-        
+    text(fs, (w/2-tw/2, h/2-36))
+    fs = FormattedString('Typography', font=choice(LIGHTS2), fontSize=h/12, fill=(1,1,1,0.95))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h/2-2))
+    fs = FormattedString('&', font=choice(LIGHTS2), fontSize=h/15, fill=(1,1,1,0.95))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h/2-th-50))
+    fs = FormattedString('Upgrade', font=choice(LIGHTS2), fontSize=h/15, fill=(1,1,1,0.95))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-18))
+       
 def image8(w, h):
     newPage(w, h)
     tc = random(),random(),random()
@@ -205,13 +218,19 @@ def image10(w, h):
         
 def image11(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
+    r, g, b = TYPETR_BLUE
+    fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('#11', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
+    save()
+    rotate(90)
+    fs = FormattedString('Logo', font='Upgrade-Semibold', fontSize=h/2, fill=(1,1,1,0.95))
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
-        
+    text(fs, (w/2-60, -70))
+    fs = FormattedString('Logo', font='Upgrade-LightItalic', fontSize=h/2, fill=(1,0,0), tracking=2.38)
+    tw, th = textSize(fs)
+    text(fs, (w/2-58, -70.8))
+    restore()
+            
 def image12(w, h):
     newPage(w, h)
     tc = random(),random(),random()
@@ -261,9 +280,11 @@ def slide01(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
@@ -271,9 +292,11 @@ def slide02(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
@@ -281,9 +304,11 @@ def slide03(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
@@ -291,9 +316,11 @@ def slide04(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
@@ -301,9 +328,11 @@ def slide05(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
@@ -311,16 +340,18 @@ def slide06(w, h):
     newPage(w, h)
     tc = 0.5*random(),0.2*random(),0.5*random()
     for n in range(200):
-        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
+    fontName = choice(upgradeFonts)
+    fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
+    fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
         
          
 IMAGES = (
-    ('pic01.gif', 384, 182, image1),    ('pic03.svg', 384, 182, image3),    ('pic04.svg', 384, 182, image4),    ('pic05.svg', 282, 242, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
+    ('pic01.gif', 384, 182, image1),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 242, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),

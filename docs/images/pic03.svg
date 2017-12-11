@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg height="182" version="1.1" width="384" xmlns="http://www.w3.org/2000/svg">
- <path d="M0,0 l384,0 l0,182 l-384,0 Z M0,0 " fill="rgba(0,0,0,1.0)" transform="matrix(1,0,0,-1,0,182)"/>
- <text text-anchor="start" transform="matrix(1,0,0,1,34.6306666667,163.0)">
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Hairline" font-size="121.33" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="-1">
+ <path d="M0,0 l384,0 l0,182 l-384,0 Z M0,0" fill="rgb(0,0,0)" transform="matrix(1,0,0,-1,0,182)"/>
+ <text text-anchor="start" transform="matrix(1,0,0,1,34.6306666667,159.0)">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Hairline" font-size="121.33" x="0" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Light" font-size="121.33" style="font-feature-settings: 'ss09', 'lnum';" x="59.7" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Light" font-size="121.33" x="59.7" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Medium" font-size="121.33" style="font-feature-settings: 'ss09', 'lnum';" x="121.33" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Medium" font-size="121.33" x="121.33" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Bold" font-size="121.33" style="font-feature-settings: 'ss09', 'lnum';" x="181.51" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Bold" font-size="121.33" x="181.51" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-UltraBlack" font-size="121.33" style="font-feature-settings: 'ss09', 'lnum';" x="243.64" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-UltraBlack" font-size="121.33" x="243.64" y="3">
    e
   </tspan>
  </text>
- <text text-anchor="start" transform="matrix(1,0,0,1,34.6306666667,82.0)">
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-HairlineItalic" font-size="121.33" style="font-feature-settings: 'lnum';" x="0" y="-1">
+ <text text-anchor="start" transform="matrix(1,0,0,1,34.6306666667,78.0)">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-HairlineItalic" font-size="121.33" x="0" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-LightItalic" font-size="121.33" style="font-feature-settings: 'lnum';" x="55.21" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-LightItalic" font-size="121.33" x="55.21" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-MediumItalic" font-size="121.33" style="font-feature-settings: 'lnum';" x="112.48" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-MediumItalic" font-size="121.33" x="112.48" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-BoldItalic" font-size="121.33" style="font-feature-settings: 'lnum';" x="171.32" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-BoldItalic" font-size="121.33" x="171.32" y="3">
    e
   </tspan>
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-UltraBlackItalic" font-size="121.33" style="font-feature-settings: 'lnum';" x="233.08" y="-1">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-UltraBlackItalic" font-size="121.33" x="233.08" y="3">
    e
   </tspan>
  </text>

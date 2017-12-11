@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg height="242" version="1.1" width="282" xmlns="http://www.w3.org/2000/svg">
- <path d="M0,0 l282,0 l0,242 l-282,0 Z M0,0 " fill="rgba(204,0,25,1.0)" transform="matrix(1,0,0,-1,0,242)"/>
- <text text-anchor="start" transform="matrix(1,0,0,1,-19.8896666667,-76.0)">
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Thin" font-size="80.67" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="124">
+ <path d="M0,0 l282,0 l0,242 l-282,0 Z M0,0" fill="rgb(204,0,25)" transform="matrix(1,0,0,-1,0,242)"/>
+ <text text-anchor="start" transform="matrix(1,0,0,1,-19.8896666667,-92.0)">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Thin" font-size="80.67" x="0" y="140">
    Corporate
   </tspan>
  </text>
- <text text-anchor="start" transform="matrix(1,0,0,1,21.2503333333,-28.0)">
-  <tspan fill="rgba(255,255,255,0.75)" font-family="Upgrade-Book" font-size="80.67" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="121">
+ <text text-anchor="start" transform="matrix(1,0,0,1,21.2503333333,-47.0)">
+  <tspan fill="rgb(255,255,255)" fill-opacity="0.75" font-family="Upgrade-Book" font-size="80.67" x="0" y="140">
    Identity
   </tspan>
  </text>
- <text text-anchor="start" transform="matrix(1,0,0,1,-4.926,-19.0)">
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Regular" font-size="60.5" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="152">
+ <text text-anchor="start" transform="matrix(1,0,0,1,-4.926,-32.0)">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Regular" font-size="60.5" x="0" y="165">
    Publications
   </tspan>
  </text>
  <text text-anchor="start" transform="matrix(1,0,0,1,-15.8644,96.0)">
-  <tspan fill="rgba(255,255,255,0.5)" font-family="Upgrade-UltraBlack" font-size="96.8" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="102">
+  <tspan fill="rgb(255,255,255)" fill-opacity="0.5" font-family="Upgrade-UltraBlack" font-size="96.8" x="0" y="102">
    Online
   </tspan>
  </text>
- <text text-anchor="start" transform="matrix(1,0,0,1,-10.09875,81.0)">
-  <tspan fill="rgba(255,255,255,1.0)" font-family="Upgrade-Regular" font-size="60.5" style="font-feature-settings: 'ss09', 'lnum';" x="0" y="152">
+ <text text-anchor="start" transform="matrix(1,0,0,1,-10.09875,68.0)">
+  <tspan fill="rgb(255,255,255)" font-family="Upgrade-Regular" font-size="60.5" x="0" y="165">
    Applications
   </tspan>
  </text>
