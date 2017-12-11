@@ -13,7 +13,10 @@
 #
 #     upgradeImages.py
 #
+from pagebot.toolbox.hyphenation import words
 TYPETR_BLUE = (0x25/255.0, 0x58/255.0, 0xAA/255.0)
+
+WORDS = words() # Get English words
 
 upgradeFonts = []
 from random import choice
@@ -256,54 +259,60 @@ def image16(w, h):
         
 def slide01(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
 def slide02(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
 def slide03(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
 def slide04(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
 def slide05(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
 def slide06(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
+    tc = 0.5*random(),0.2*random(),0.5*random()
+    for n in range(200):
+        fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fs = FormattedString('TYPETR Upgrade', font=choice(upgradeFonts), fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
