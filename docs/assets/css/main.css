@@ -14,6 +14,8 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
+		font-weight: normal;
+		font-style: normal;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -1096,7 +1098,6 @@
 	}
 
 	h3 {		
-		font-family: TYPETR-Upgrade-Semibold;
 		font-size: 1.3em;
 		margin: 0 0 0.5em 0;
 	}

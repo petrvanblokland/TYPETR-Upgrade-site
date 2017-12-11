@@ -18,6 +18,35 @@ TYPETR_BLUE = (0x25/255.0, 0x58/255.0, 0xAA/255.0)
 
 WORDS = words() # Get English words
 
+t = """*Design Design Space* is an online coaching environment to develop your design skills. Query your questions and improve your sketching. Acquire new techniques and research your way of presentating. In short, a space where you can design your design process. What kind of challenges do you experience in your daily work as a designer? Working closely together online with experienced designers and a group of other students, there is space to define your own study topics and challenges. In fact, such a selection and planning process is an integral part of the study itself. You tell us what you want, and together we’ll find a way to get there.
+
+### Planning
+By definition designers are bad planners. It seems to be fundamental to design. Too optimistic in the beginning – “There is still plenty of time”, a design is never finished – “The next one will always be better”. 
+
+However, the fact that most designs are supposed to meet external requirements, the final deadline may have a much larger impact on the quality of the result, than the personal opinion of the designer. How do you make this apparent conflict work to your advantage?
+
+### How much time do you need?
+The core idea behind designing the design process, is that it doesn’t make a difference for how long you do it. A project of 1 hour, basically goes through the same stages (research – design – presentation) as a project of 1 year. Of course, it does matters how long you study something, for the level of details that can be addressed. But if you only have a day or a week for an assignment, then that is part of the requirements. The result can still be better than anything your customer would have done. 
+How would you design such a design process better next time?
+
+### 1 day • 1 week • 1 month • 1 season • 1 year
+Study lengths range from 1 day, 1 week, 1 month, 1 season and possibly 1 year, whatever fits best to your plans, your practical possibilities and your financial situation.
+
+### What does it cost?
+* 1 day $150 (<a href="game.html">Design Game</a>, group of minimal 12)
+* <a href="projects.html#oneWeek">1 week</a> $900 (7 days, group of 4 or more)
+* <a href="projects.html#oneMonth">1 month</a> $1,900 (calendar month, individual or group)
+* <a href="projects.html#oneSeason">1 season</a> $3,900 (3 calendar months, individual or group)
+* <a href="projects.html#oneYear">1 year</a> $7,900 (individual or group)
+Prices are per person. Discount or split payment for the month, season and year trainings can be discussed, depending on your personal situation. For corporate trainings, groups or customized requests, please <a href="mailto:info@designdesign.space?subject=Tell me more about Design Design Space">contact us</a>.
+Students who whish to extend one training level into another, a 50% reduction is applied on previous payed tuition. E.g 1 day followed by 1 week: 1/2 $150 + $900 = $975. Or 1 week followed by 1 month: 1/2 $900 + $1,900 = $2,350. Or 1 week followed by 1 season: 1/2 $900 + $3,900 = $4,350
+
+### What is the schedule & how to submit?
+Every 6 months, in March and September, a new day-week-month-season-year sequence starts, most likely if there is enough participating students. 
+Day-week sequences or single day Design Games can take place on other dates during the year, if the amount of participants makes it possible. Since working as a team of students a minimum amount of three is required, and also a mininum level of quality, motivation and experience.
+Season and year-students are admitted after showing their portfolios and the result of a given assignment. Also they are asked to write a motivation and development plan.
+Students that finish a training adequately, automatically get accepted for a next."""
+
 upgradeFonts = []
 from random import choice
 for fontName in installedFonts():
@@ -191,30 +220,44 @@ def image7(w, h):
        
 def image8(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
+    r, g, b = 0.1*random(),0.1*random(),0.5*random()
+    fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('I#8', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
+    fs = FormattedString('Use\nUpgrade', font='Upgrade-RegularItalic', fontSize=22, fill=1, lineHeight=18)
+    fs += FormattedString('\n\n\n     OK', font='Upgrade-Medium', fontSize=22, fill=1)
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
+    text(fs, (12, h-30))
+    fill(None)
+    stroke(1)
+    strokeWidth(1)
+    rect(10, 18, w-20, 33)
         
 def image9(w, h):
+    REGULAR = (
+        'Upgrade-Thin',        'Upgrade-ExtraLight',        'Upgrade-Light',        'Upgrade-Book',
+        'Upgrade-Regular'
+    )
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
+    r, g, b = 0.1*random(),0.1*random(),0.1*random()
+    fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('I#9', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
+    M = 8
+    fs = FormattedString("""<html>\n<head>\n<style>\n   @font-face{\n      font-family:\n      'Upgrade-Regular';\n   }\n</style>\n</head>\n<body>""",
+        font=choice(REGULAR), fontSize=14, fill=(0, 1, 0))
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
+    textBox(fs, (M, -M, w*2, h))
         
 def image10(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
+    fill(1)
     rect(0, 0, w, h)
-    fs = FormattedString('#10', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
+    M = 14
+    fs = FormattedString(t, font='Upgrade-Regular', fontSize=4, fill=0.2)
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
+    textBox(fs, (M, M*1.5, w-2*M, h-2.5*M))
+    fs = FormattedString('56', font='Upgrade-Regular', fontSize=4, fill=0.2)
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, M*0.5))
         
 def image11(w, h):
     newPage(w, h)
@@ -223,12 +266,16 @@ def image11(w, h):
     rect(0, 0, w, h)
     save()
     rotate(90)
+    fs = FormattedString('Logo', font='Upgrade-UltraBlack', fontSize=h/2, fill=(0,1,1,0.4), tracking=-5.9)
+    tw, th = textSize(fs)
+    text(fs, (w/2-58, -70))
+
     fs = FormattedString('Logo', font='Upgrade-Semibold', fontSize=h/2, fill=(1,1,1,0.95))
     tw, th = textSize(fs)
     text(fs, (w/2-60, -70))
-    fs = FormattedString('Logo', font='Upgrade-LightItalic', fontSize=h/2, fill=(1,0,0), tracking=2.38)
+    fs = FormattedString('Logo', font='Upgrade-MediumItalic', fontSize=h/2, fill=(0.2,0,0.5,0.5), tracking=0.95)
     tw, th = textSize(fs)
-    text(fs, (w/2-58, -70.8))
+    text(fs, (w/2-56, -70.8))
     restore()
             
 def image12(w, h):
