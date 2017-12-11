@@ -1097,6 +1097,7 @@
 
 	h3 {		
 		font-family: TYPETR-Upgrade-Semibold;
+		font-size: 1.3em;
 		margin: 0 0 0.5em 0;
 	}
 
@@ -1177,7 +1178,7 @@
 	}
 
 		.blocks a:after {
-			content: "\f0a9";
+			content: ">";
 			font-family: TYPETR-Upgrade-Regular;
 			text-decoration: none;
 			font-size: 55px;
@@ -1378,7 +1379,7 @@
 			}
 
 			h3 {
-				font-size: 1em;
+				font-size: 1.2em;
 			}
 
 			.side-padded, .right-sidebar {
@@ -1600,7 +1601,7 @@
 				}
 
 					#banner .nav-next:before {
-						content: "\f105";
+						content: ">";
 					}
 
 				#banner .nav-previous {
@@ -1609,13 +1610,13 @@
 				}
 
 					#banner .nav-previous:before {
-						content: "\f104";
+						content: "<";
 					}
 
 				#banner .captions {
 					position: absolute;
 					background: #2558AA;
-					background: rgba(0, 166, 235, 0.9);
+					opacity: 0.7;
 					padding: 4em 7em 2.5em 2.5em;
 					bottom: 1.5em;
 					left: 1.5em;
@@ -1625,7 +1626,7 @@
 				}
 
 					#banner .captions:after {
-						content: "\f0a9";
+						content: ">";
 						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 55px;
@@ -1718,7 +1719,7 @@
 					}
 
 					#search form:before {
-						content: "\f002";
+						content: "<";
 						font-family: TYPETR-Upgrade-Regular;
 						text-decoration: none;
 						font-size: 18px;
@@ -1857,7 +1858,7 @@
 
 			body {
 				min-width: 1000px;
-				font-size: 9.5pt;
+				font-size: 1em;
 			}
 
 			.blocks a {
@@ -2000,7 +2001,7 @@
 
 			body {
 				line-height: 1.75em;
-				font-size: 9.5pt;
+				font-size: 1.25em;
 			}
 
 			h2 {
@@ -2339,7 +2340,7 @@
 				}
 
 					#banner .nav-next:before {
-						content: "\f105";
+						content: ">";
 					}
 
 				#banner .nav-previous {
@@ -2347,7 +2348,7 @@
 				}
 
 					#banner .nav-previous:before {
-						content: "\f104";
+						content: "<";
 					}
 
 				#banner .captions {

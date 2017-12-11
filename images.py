@@ -157,13 +157,13 @@ def image5(w, h):
         
 def image6(w, h):
     newPage(w, h)
-    tc = random(),random(),random()
-    fill(1-tc[0], 1-tc[1], 1-tc[2])
-    rect(0, 0, w, h)
-    fs = FormattedString('I#6', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
-    tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2-th/2))
-        
+    path = 'docs/images/pic06page.png'
+    iw, ih = imageSize(path)
+    save()
+    scale(0.35)
+    image(path, (-65, -760))
+    restore()
+    
 def image7(w, h):
     newPage(w, h)
     tc = random(),random(),random()
@@ -311,7 +311,7 @@ def slide06(w, h):
         
          
 IMAGES = (
-    ('pic01.gif', 384, 182, image1),    ('pic03.svg', 384, 182, image3),    ('pic04.svg', 384, 182, image4),    ('pic05.svg', 282, 242, image5),    ('pic06.jpg', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
+    ('pic01.gif', 384, 182, image1),    ('pic03.svg', 384, 182, image3),    ('pic04.svg', 384, 182, image4),    ('pic05.svg', 282, 242, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),
