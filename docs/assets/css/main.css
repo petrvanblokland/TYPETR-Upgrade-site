@@ -1081,7 +1081,7 @@
 	}
 
 	a {
-		color: #00a6eb;
+		color: #2558AA;
 		text-decoration: underline;
 	}
 
@@ -1101,6 +1101,9 @@
 	}
 
 	p, ul {
+		font-family: TYPETR-Upgrade-Book;
+		letter-spacing: 0.02em;
+		font-size: 1.1em;
 		margin-bottom: 3em;
 	}
 
@@ -1204,7 +1207,7 @@
 	}
 
 	.blocks .one {
-		background: #00a6eb;
+		background: #2558AA;
 	}
 
 		.blocks .one:hover {
@@ -1313,7 +1316,7 @@
 		transition: background-color .25s ease-in-out;
 		position: relative;
 		display: inline-block;
-		background: #00A6EB;
+		background: #2558AA;
 		color: #fff;
 		padding: 1.2em 3.25em 1.2em 1.75em;
 		text-decoration: none;
@@ -1398,7 +1401,7 @@
 		/* Wrappers */
 
 			#header-wrapper {
-				background: #00a6eb;
+				background: #2558AA;
 				padding: 2em 0;
 			}
 
@@ -1508,7 +1511,7 @@
 					}
 
 			.dropotron {
-				background: #00a6eb;
+				background: #2558AA;
 				background: rgba(0, 166, 235, 0.9);
 				padding: 1em 0.5em 1em 0.5em;
 				line-height: 3em;
@@ -1611,7 +1614,7 @@
 
 				#banner .captions {
 					position: absolute;
-					background: #00a6eb;
+					background: #2558AA;
 					background: rgba(0, 166, 235, 0.9);
 					padding: 4em 7em 2.5em 2.5em;
 					bottom: 1.5em;
@@ -1728,7 +1731,7 @@
 						right: 0;
 						top: 0;
 						z-index: 2;
-						background: #00a6eb;
+						background: #2558AA;
 						color: #fff;
 						width: 34px;
 						height: 34px;
@@ -1747,7 +1750,7 @@
 				}
 
 			#content section header, #content article header {
-				border-top: solid 7px #00a6eb;
+				border-top: solid 7px #2558AA;
 				padding-top: 4em;
 				margin: 0 0 3em 0;
 			}
@@ -1797,7 +1800,7 @@
 				}
 
 			#sidebar section header {
-				border-top: solid 7px #00a6eb;
+				border-top: solid 7px #2558AA;
 				padding-top: 3.5em;
 				margin: 0 0 3em 0;
 			}
@@ -2016,7 +2019,7 @@
 			}
 
 			section header, article header {
-				border-top: solid 5px #00a6eb;
+				border-top: solid 5px #2558AA;
 				padding-top: 2em;
 				margin: 0 0 2.5em 0;
 			}
@@ -2156,7 +2159,7 @@
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #00a6eb;
+				background: #2558AA;
 				color: #fff;
 			}
 
@@ -2433,7 +2436,7 @@
 						right: 0;
 						top: 0;
 						z-index: 2;
-						background: #00a6eb;
+						background: #2558AA;
 						color: #fff;
 						width: 34px;
 						height: 34px;
