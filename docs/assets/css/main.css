@@ -1433,7 +1433,7 @@
 			}
 
 			#main-wrapper {
-				padding: 6em 0 6em 0;
+				padding: 2em 0 1em 0;
 			}
 
 			#footer-wrapper {
@@ -1754,7 +1754,7 @@
 
 			#content section header, #content article header {
 				border-top: solid 7px #2558AA;
-				padding-top: 4em;
+				padding-top: 2em;
 				margin: 0 0 3em 0;
 			}
 
@@ -1902,7 +1902,7 @@
 			}
 
 			#main-wrapper {
-				padding: 3em 0 4em 1em;
+				padding: 2em 0 4em 1em;
 			}
 
 			#footer-wrapper {
@@ -2118,7 +2118,7 @@
 			}
 
 			#main-wrapper {
-				padding: 4em 20px 4em 20px;
+				padding: 2em 20px 4em 20px;
 			}
 
 			#footer-wrapper {
