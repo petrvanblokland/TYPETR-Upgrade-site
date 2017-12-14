@@ -1404,13 +1404,14 @@
 
 			#header-wrapper {
 				background: #2558AA;
-				padding: 2em 0;
+				padding: 1em 0;
 			}
 
 			#banner-wrapper {
 				position: relative;
-				background: #2f2f2f url("images/overlay.png");
-				padding: 4em 0 4em 0;
+				/*background: #2f2f2f url("images/overlay.png");*/
+				background: #fff url("images/overlay.png");
+				padding: 0 0 0 0;
 			}
 
 				#banner-wrapper:before {
@@ -1432,7 +1433,7 @@
 			}
 
 			#main-wrapper {
-				padding: 6em 0 6em 0;
+				padding: 2em 0 1em 0;
 			}
 
 			#footer-wrapper {
@@ -1753,7 +1754,7 @@
 
 			#content section header, #content article header {
 				border-top: solid 7px #2558AA;
-				padding-top: 4em;
+				padding-top: 2em;
 				margin: 0 0 3em 0;
 			}
 
@@ -1885,11 +1886,11 @@
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 1em 0;
+				padding: 1em 1em;
 			}
 
 			#banner-wrapper {
-				padding: 2em 0 2em 0;
+				padding: 0 0 0 0;
 			}
 
 				#banner-wrapper:before {
@@ -1901,7 +1902,7 @@
 			}
 
 			#main-wrapper {
-				padding: 3em 0 4em 0;
+				padding: 2em 0 4em 1em;
 			}
 
 			#footer-wrapper {
@@ -2117,7 +2118,7 @@
 			}
 
 			#main-wrapper {
-				padding: 4em 20px 4em 20px;
+				padding: 2em 20px 4em 20px;
 			}
 
 			#footer-wrapper {
@@ -2356,7 +2357,7 @@
 					position: relative;
 					background: #2f2f2f url("images/overlay.png");
 					color: #fff;
-					padding: 1em 10px 1em 10px;
+					padding: 1em 10px 1em 1em;
 				}
 
 					#banner .captions .caption-line-1 {
