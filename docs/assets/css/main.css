@@ -1385,7 +1385,7 @@
 			}
 
 			.side-padded, .right-sidebar {
-				padding-left: 2em;
+				padding-left: 1em;
 			}
 
 			.left-sidebar {
@@ -1756,7 +1756,7 @@
 			#content section header, #content article header {
 				border-top: solid 7px #2558AA;
 				padding-top: 2em;
-				margin: 0 0 3em 0;
+				margin: 0 0 1.8em 0;
 			}
 
 				#content section header .byline, #content article header .byline {
@@ -1772,6 +1772,7 @@
 			#content section.featured header .byline, #content article.featured header .byline {
 				font-size: 2em;
 				letter-spacing: 0;
+
 			}
 
 			#content section.featured header h2, #content article.featured header h2 {
