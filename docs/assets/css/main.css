@@ -1805,8 +1805,8 @@
 
 			#sidebar section header {
 				border-top: solid 7px #2558AA;
-				padding-top: 3.5em;
-				margin: 0 0 3em 0;
+				padding-top: 1.5em;
+				margin: 0 0 2em 0;
 			}
 
 				#sidebar section header h2 {
@@ -2071,10 +2071,7 @@
 			margin-bottom: 5em;
 			}
 			
-			p  {
-			margin-bottom: 5em;
 
-			}
 
 			.button {
 				-moz-box-sizing: border-box;
