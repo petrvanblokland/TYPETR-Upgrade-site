@@ -223,7 +223,7 @@ def image8(w, h):
     r, g, b = 0.1*random(),0.1*random(),0.5*random()
     fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('Use\nUpgrade', font='Upgrade-RegularItalic', fontSize=22, fill=1, lineHeight=18)
+    fs = FormattedString('Using\nUpgrade', font='Upgrade-RegularItalic', fontSize=22, fill=1, lineHeight=18)
     fs += FormattedString('\n\n\n     OK', font='Upgrade-Medium', fontSize=22, fill=1)
     tw, th = textSize(fs)
     text(fs, (12, h-30))
@@ -395,14 +395,55 @@ def slide06(w, h):
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
         
-        
+def weights(w, h):
+    newPage(w, h)
+    fill(0)
+    rect(0, 0, w, h)
+    fSize = 24
+    leading = fSize*1.2
+    UpgradeWeights2 = list(UpgradeWeights[:])
+    UpgradeWeights2.reverse()
+    fs = FormattedString('')
+    for fontName in UpgradeWeights:
+        fs += FormattedString('ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('Ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('Ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('$', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('$', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('¢', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('¢', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True))
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True))
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False))
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h/2))
+     
          
 IMAGES = (
-    ('pic01.gif', 384, 182, image1),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 242, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
+    ('pic01.gif', 384, 182, image1),    ('pic02.png', 384, 182, image2),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 290, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),
-    ('pic02.svg', 384, 182, image2),)        
+    ('weights.png', 500, 300, weights),
+)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
