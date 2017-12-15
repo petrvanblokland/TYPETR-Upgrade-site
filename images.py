@@ -55,7 +55,10 @@ for fontName in installedFonts():
 print upgradeFonts
 UpgradeWeightsItalic = (
     'Upgrade-HairlineItalic',    'Upgrade-ThinItalic',    'Upgrade-ExtraLightItalic',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-RegularItalic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',    'Upgrade-ExtraBlackItalic',    'Upgrade-UltraBlackItalic',)
+
 UpgradeWeights = (    'Upgrade-Hairline',    'Upgrade-Thin',    'Upgrade-ExtraLight',    'Upgrade-Light',    'Upgrade-Book',    'Upgrade-Regular',    'Upgrade-Medium',    'Upgrade-Semibold',    'Upgrade-Bold',    'Upgrade-Black',    'Upgrade-ExtraBlack',    'Upgrade-UltraBlack',)
+UpgradeNonBlackestWeights = (    'Upgrade-Hairline',    'Upgrade-Thin',    'Upgrade-ExtraLight',    'Upgrade-Light',    'Upgrade-Book',    'Upgrade-Regular',    'Upgrade-Medium',    'Upgrade-Semibold',    'Upgrade-Bold',    'Upgrade-Black',    #'Upgrade-ExtraBlack',    #'Upgrade-UltraBlack',    'Upgrade-HairlineItalic',    'Upgrade-ThinItalic',    'Upgrade-ExtraLightItalic',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-RegularItalic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',    #'Upgrade-ExtraBlackItalic',    #'Upgrade-UltraBlackItalic',)
+
 masterWeights = (
     'Upgrade-Hairline',    'Upgrade-Light',    'Upgrade-Medium',    'Upgrade-Bold',    'Upgrade-UltraBlack',    
 )
@@ -329,7 +332,7 @@ def slide01(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -341,7 +344,7 @@ def slide02(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -353,7 +356,7 @@ def slide03(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -365,7 +368,7 @@ def slide04(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -377,7 +380,7 @@ def slide05(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -389,7 +392,7 @@ def slide06(w, h):
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeNonBlackestWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
