@@ -1173,7 +1173,7 @@
 		display: block;
 		color: #fff;
 		text-decoration: none;
-		padding: 3em 7em 3em 2em;
+		padding: 2em 3em 2em 1.5em;
 		margin: 0 0 0.5em 0;
 		outline: 0;
 	}
@@ -1384,7 +1384,7 @@
 			}
 
 			.side-padded, .right-sidebar {
-				padding-left: 2em;
+				padding-left: 0em;
 			}
 
 			.left-sidebar {
@@ -1433,7 +1433,7 @@
 			}
 
 			#main-wrapper {
-				padding: 6em 0 6em 0;
+				padding: 3em 0 3em 0;
 			}
 
 			#footer-wrapper {
@@ -1755,7 +1755,7 @@
 			#content section header, #content article header {
 				border-top: solid 7px #2558AA;
 				padding-top: 4em;
-				margin: 0 0 3em 0;
+				margin: 0 0 1.8em 0;
 			}
 
 				#content section header .byline, #content article header .byline {
@@ -1795,7 +1795,7 @@
 			}
 
 			#sidebar > section {
-				margin-bottom: 5em;
+				margin-bottom: 2em;
 			}
 
 				#sidebar > section:last-child {
@@ -1804,8 +1804,8 @@
 
 			#sidebar section header {
 				border-top: solid 7px #2558AA;
-				padding-top: 3.5em;
-				margin: 0 0 3em 0;
+				padding-top: 1.5em;
+				margin: 0 0 2em 0;
 			}
 
 				#sidebar section header h2 {
@@ -1864,7 +1864,7 @@
 			}
 
 			.blocks a {
-				padding: 2em 7em 2em 2em;
+				padding: 1.5em 4em 2em 1em;
 				margin: 0 0 0.5em 0;
 			}
 
@@ -2024,7 +2024,7 @@
 			section header, article header {
 				border-top: solid 5px #2558AA;
 				padding-top: 2em;
-				margin: 0 0 2.5em 0;
+				margin: 0 0 1.5em 0;
 			}
 
 				section header .byline, article header .byline {
@@ -2086,7 +2086,7 @@
 				}
 
 			.blocks a {
-				padding: 1.5em 6.3em 1.5em 1.3em;
+				padding: 1.5em 3.3em 1.5em 1.3em;
 				margin: 0 0 0.5em 0;
 			}
 
@@ -2118,7 +2118,7 @@
 			}
 
 			#main-wrapper {
-				padding: 4em 20px 4em 20px;
+				padding: 1.5em 20px 1em 20px;
 			}
 
 			#footer-wrapper {
