@@ -14,6 +14,8 @@
 #     upgradeImages.py
 #
 from pagebot.toolbox.hyphenation import words
+from pagebot.style import CENTER
+
 TYPETR_BLUE = (0x25/255.0, 0x58/255.0, 0xAA/255.0)
 
 WORDS = words() # Get English words
@@ -396,45 +398,62 @@ def slide06(w, h):
     text(fs, (w/2-tw/2, h/2+50))
         
 def weights(w, h):
+    M = 40
+    TRACKING = 0.4
     newPage(w, h)
     fill(0)
     rect(0, 0, w, h)
-    fSize = 24
+    fSize = 34
     leading = fSize*1.2
     UpgradeWeights2 = list(UpgradeWeights[:])
     UpgradeWeights2.reverse()
     fs = FormattedString('')
     for fontName in UpgradeWeights:
-        fs += FormattedString('ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
-        fs += FormattedString('Ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('Ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('Ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('Ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
-        fs += FormattedString('$', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('$', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('$', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('$', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
-        fs += FormattedString('¢', font=fontName, fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('¢', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('¢', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading)
+        fs += FormattedString('¢', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
-        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True))
+        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True))
+        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True), align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
-        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False))
+        fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False))
+        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('A', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('A', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('a', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('a', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
+    for fontName in UpgradeWeights:
+        fs += FormattedString('&', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+    for fontName in UpgradeWeights2:
+        fs += FormattedString('&', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     tw, th = textSize(fs)
-    text(fs, (w/2-tw/2, h/2))
+    text(fs, (w/2-tw/2, h-M))
      
          
 IMAGES = (
@@ -442,7 +461,7 @@ IMAGES = (
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),
-    ('weights.png', 500, 300, weights),
+    ('weights.png', 700, 400, weights),
 )        
       
 for path, w, h, m in IMAGES:
