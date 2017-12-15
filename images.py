@@ -463,7 +463,7 @@ IMAGES = (
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),
-    ('weights.png', 700, 400, weights),
+    ('glyphsbyweights.png', 700, 400, weights),
 )        
       
 for path, w, h, m in IMAGES:
