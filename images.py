@@ -531,7 +531,9 @@ def tablefigures(w, h):
     fSize = w/7
     leading = fSize*1.3
     fs = FormattedString('€3.428,95\n', font=fName, fontSize=fSize, fill=0)
-    fs += FormattedString('€3.428,95', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(tnum=True))
+    fs += FormattedString('€3.428,95\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(tnum=True))
+    fs += FormattedString('€3.428,95\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(onum=True))
+    fs += FormattedString('€3.428,95\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(smcp=True))
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h-40))
       
@@ -558,7 +560,7 @@ IMAGES = (
     ('45st5th.png', 275, 500, image45st5th),
     ('fraction.png', 275, 55, fractions),
     ('smallcaps.png', 275, 200, smallcaps),
-    ('tablefigures.png', 275, 100, tablefigures),
+    ('tablefigures.png', 275, 200, tablefigures),
     ('zeroslash.png', 275, 100, zeroslash),
 )        
       
