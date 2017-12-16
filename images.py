@@ -457,13 +457,109 @@ def weights(w, h):
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h-M))
      
-         
-IMAGES = (
+def image45st5th(w, h):
+    newPage(w, h)
+    fill(1)
+    rect(0, 0, w, h)
+    fName = 'Upgrade-Regular'
+    fSize = w/4.5
+    leading = fSize*1.3
+    fs = FormattedString('42', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('st', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString(' 5', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('th\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString('C', font=fName, fontSize=fSize, fill=0, lineHeight=leading)
+    fs +=  FormattedString('12', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sinf=True))
+    fs +=  FormattedString('H', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('22', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sinf=True))
+    fs +=  FormattedString('O', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('11\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sinf=True))
+
+    fs +=  FormattedString('(x', font=fName, fontSize=fSize, fill=0, lineHeight =leading)
+    fs +=  FormattedString('2', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sinf=True))
+    fs +=  FormattedString('–x', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('1', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sinf=True))
+    fs +=  FormattedString(')', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('2\n', font=fName, fontSize=fSize, fill=0, lineHeight=leading, openTypeFeatures=dict(sups=True))
+    
+    fs +=  FormattedString('x', font=fName, fontSize=fSize, fill=0, lineHeight=leading)
+    fs +=  FormattedString('n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString('+y', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString('=z', font=fName, fontSize=fSize, fill=0)
+    fs +=  FormattedString('n\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+
+    fs +=  FormattedString('45.63cm', font=fName, fontSize=fSize, fill=0, lineHeight=leading, openTypeFeatures=dict(lnum=True))
+    fs +=  FormattedString('3\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString('$149', font=fName, fontSize=fSize, fill=0, lineHeight=leading)
+    fs +=  FormattedString('99', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+
+    print listOpenTypeFeatures(fName)
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-72))
+
+def fractions(w, h):
+    newPage(w, h)
+    fill(1)
+    rect(0, 0, w, h)
+    fName = 'Upgrade-Regular'
+    fSize = w/7
+    leading = fSize*1.3
+    fs = FormattedString('23/47 * 3/17 = 69/799', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(frac=True))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-40))
+      
+def smallcaps(w, h):
+    newPage(w, h)
+    fill(1)
+    rect(0, 0, w, h)
+    fName = 'Upgrade-Regular'
+    fSize = w/7
+    leading = fSize*1.3
+    fs = FormattedString('Upgrade Caps\n', font=fName, fontSize=fSize, fill=0)
+    fs += FormattedString('Upgrade Caps\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(smcp=True))
+    fs += FormattedString('Upgrade Caps\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(c2sc=True))
+    fs += FormattedString('Upgrade Caps', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(smcp=True, c2sc=True))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-40))
+      
+def tablefigures(w, h):
+    newPage(w, h)
+    fill(1)
+    rect(0, 0, w, h)
+    fName = 'Upgrade-Regular'
+    fSize = w/7
+    leading = fSize*1.3
+    fs = FormattedString('€3.428,95\n', font=fName, fontSize=fSize, fill=0)
+    fs += FormattedString('€3.428,95', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(tnum=True))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-40))
+      
+def zeroslash(w, h):
+    newPage(w, h)
+    fill(1)
+    rect(0, 0, w, h)
+    fName = 'Upgrade-Regular'
+    fSize = w/7
+    leading = fSize*1.3
+    fs = FormattedString('€1.200.000,–\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(zero=False, case=True))
+    fs += FormattedString('€1.200.000,–', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(zero=True, case=True))
+    tw, th = textSize(fs)
+    text(fs, (w/2-tw/2, h-40))
+      
+IMAGES_2 = (
     ('pic01.gif', 384, 182, image1),    ('pic02.png', 384, 182, image2),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 290, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 78, 78, image12),    ('pic13.jpg', 78, 78, image13),    ('pic14.jpg', 78, 78, image14),    ('pic15.jpg', 78, 78, image15),    ('pic16.jpg', 78, 78, image16),    ('slide01.jpg', 1200, 440, slide01),    ('slide02.jpg', 1200, 440, slide02),    ('slide03.jpg', 1200, 440, slide03),
     ('slide04.jpg', 1200, 440, slide04),
     ('slide05.jpg', 1200, 440, slide05),
     ('slide06.jpg', 1200, 440, slide06),
     ('glyphsbyweights.png', 700, 400, weights),
+)
+IMAGES = (
+    ('45st5th.png', 275, 500, image45st5th),
+    ('fraction.png', 275, 55, fractions),
+    ('smallcaps.png', 275, 200, smallcaps),
+    ('tablefigures.png', 275, 100, tablefigures),
+    ('zeroslash.png', 275, 100, zeroslash),
 )        
       
 for path, w, h, m in IMAGES:
