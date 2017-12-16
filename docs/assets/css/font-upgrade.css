@@ -6,6 +6,7 @@
     
     src:url('../fonts/Upgrade-Regular.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Regular.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Regular.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Regular.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Regular.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Regular.svg?v=4.6.3#upgraderegular') format('svg');
@@ -16,6 +17,7 @@
     
     src:url('../fonts/Upgrade-Bold.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Bold.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Bold.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Bold.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Bold.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Bold.svg?v=4.6.3#upgradebold') format('svg');
@@ -27,6 +29,7 @@
     
     src:url('../fonts/Upgrade-Semibold.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Semibold.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Semibold.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Semibold.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Semibold.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Semibold.svg?v=4.6.3#upgradesemibold') format('svg');
@@ -37,6 +40,7 @@
     
     src:url('../fonts/Upgrade-Book.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Book.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Book.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Book.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Book.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Book.svg?v=4.6.3#upgradebook') format('svg');
@@ -47,6 +51,7 @@
     
     src:url('../fonts/Upgrade-Medium.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Medium.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Medium.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Medium.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Medium.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Medium.svg?v=4.6.3#upgrademedium') format('svg');
@@ -57,6 +62,7 @@
     
     src:url('../fonts/Upgrade-Light.eot?v=4.6.3');
     src:url('../fonts/Upgrade-Light.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+        url('../fonts/Upgrade-Light.woff2?v=4.6.3') format('woff2'),
         url('../fonts/Upgrade-Light.woff?v=4.6.3') format('woff'),
         url('../fonts/Upgrade-Light.ttf?v=4.6.3') format('truetype'),
         url('../fonts/Upgrade-Light.svg?v=4.6.3#upgradelight') format('svg');
