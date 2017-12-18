@@ -138,6 +138,9 @@
 		}
 
 	}
+	
+	
+	
 
 	@media screen and (max-width: 736px) {
 
@@ -341,7 +344,7 @@
 	}
 
 	.\34 u, .\34 u\24 {
-		width: 33.3333333333%;
+		width: 32.3333333333%;
 		clear: none;
 		margin-left: 0;
 	}
@@ -1648,16 +1651,16 @@
 
 					#banner .captions .caption-line-1 {
 						display: block;
-						font-size: 3em;
+						font-size: 2.5em;
 						letter-spacing: 0;
-						margin: 0 0 0.75em 0;
+						margin: 0 0 0.55em 0;
 					}
 
 					#banner .captions .caption-line-2 {
 						display: block;
 						font-size: 1.5em;
 						letter-spacing: 0;
-						line-height: 1.5em;
+						line-height: 1em;
 						color: rgba(255, 255, 255, 0.8);
 					}
 
@@ -1796,6 +1799,7 @@
 
 			#sidebar > section {
 				margin-bottom: 2em;
+				width:100%;
 			}
 
 				#sidebar > section:last-child {
@@ -1941,7 +1945,7 @@
 				}
 
 				#banner .captions {
-					padding: 3em 7em 2em 2em;
+					padding: 1.5em 3em 1.5em 1.5em;
 					bottom: 1.25em;
 					left: 1.25em;
 					color: #fff;
@@ -1953,14 +1957,15 @@
 					}
 
 					#banner .captions .caption-line-1 {
-						font-size: 2.5em;
+						font-size: 2em;
 						letter-spacing: 0;
+						line-height:0.8em;
 					}
 
 					#banner .captions .caption-line-2 {
 						font-size: 1.25em;
 						letter-spacing: 0;
-						line-height: 1.25em;
+						line-height: 1em;
 					}
 
 				#banner .slide img {
@@ -2396,14 +2401,16 @@
 				}
 
 					#banner .captions .caption-line-1 {
-						font-size: 1.5em;
+						font-size: 1em;
+						line-height:1em;
 						letter-spacing: 0;
 						display: block;
-						margin: 0 0 0.5em 0;
+						margin: 0 0 0 0;
 					}
 
 					#banner .captions .caption-line-2 {
 						font-size: 1.1em;
+						line-height:1em;
 						color: rgba(255, 255, 255, 0.8);
 					}
 
