@@ -118,23 +118,23 @@
 		.container.\31 25\25 {
 			width: 100%;
 			max-width: 1250px;
-			min-width: 1000px;
+			min-width: 737px;
 		}
 
 		.container.\37 5\25 {
-			width: 750px;
+			width: 75%;
 		}
 
 		.container.\35 0\25 {
-			width: 500px;
+			width: 50%;
 		}
 
 		.container.\32 5\25 {
-			width: 250px;
+			width: 25%;
 		}
 
 		.container {
-			width: 1000px;
+			width: 100%;
 		}
 
 	}
@@ -1757,7 +1757,7 @@
 
 			#content section header, #content article header {
 				border-top: solid 7px #2558AA;
-				padding-top: 4em;
+				padding-top: 1em;
 				margin: 0 0 1.8em 0;
 			}
 
@@ -1778,6 +1778,7 @@
 
 			#content section.featured header h2, #content article.featured header h2 {
 				font-size: 4em;
+				line-height:1em;
 				letter-spacing: 0;
 				margin: 0.25em 0 0.75em 0;
 			}
@@ -1863,7 +1864,7 @@
 		/* Basic */
 
 			body {
-				min-width: 1000px;
+				min-width: 737px;
 				font-size: 1em;
 			}
 
@@ -2401,8 +2402,8 @@
 				}
 
 					#banner .captions .caption-line-1 {
-						font-size: 1em;
-						line-height:1em;
+						font-size: 1.5em;
+						line-height:1.2em;
 						letter-spacing: 0;
 						display: block;
 						margin: 0 0 0 0;
