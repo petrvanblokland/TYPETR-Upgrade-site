@@ -1109,6 +1109,7 @@
 		font-family: TYPETR-Upgrade-Book;
 		letter-spacing: 0.02em;
 		font-size: 1.1em;
+		line-height:1.5em;
 		margin-bottom: 3em;
 	}
 
@@ -1164,7 +1165,7 @@
 
 	.align-left {
 		float: left;
-		margin-right: 2em;
+		margin-right: 0.6em;
 	}
 
 	.blocks a {
@@ -1575,7 +1576,7 @@
 					width: 52px;
 					height: 64px;
 					z-index: 3;
-					opacity: 0;
+					opacity: 1;
 					cursor: pointer;
 					text-align: center;
 					line-height: 64px;
@@ -1589,15 +1590,15 @@
 						font-weight: normal;
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
-						color: #fff;
+						color: #000000;
 					}
 
 					#banner .nav-next:hover, #banner .nav-previous:hover {
-						opacity: 1.0;
+						color: #000000;
+
 					}
 
 				#banner:hover .nav-next, #banner:hover .nav-previous {
-					opacity: 0.45;
 				}
 
 				#banner .nav-next {
@@ -1768,7 +1769,7 @@
 				}
 
 				#content section header h2, #content article header h2 {
-					margin: 0 0 0.5em 0;
+					margin: 0.5em 0 0.5em 0;
 				}
 
 			#content section.featured header .byline, #content article.featured header .byline {
@@ -1907,7 +1908,7 @@
 			}
 
 			#main-wrapper {
-				padding: 3em 0 4em 1em;
+				padding: 3em 0em 4em 1em;
 			}
 
 			#footer-wrapper {
@@ -1982,7 +1983,7 @@
 		/* Sidebar */
 
 			#sidebar > section {
-				margin-bottom: 4em;
+				margin-bottom: 2em;
 			}
 
 		/* Copyright */
@@ -2362,7 +2363,7 @@
 						font-weight: normal;
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
-						color: #fff;
+						color: #000;
 						display: block;
 						width: 52px;
 						height: 64px;
@@ -2376,6 +2377,8 @@
 
 					#banner .nav-next:hover, #banner .nav-previous:hover {
 						opacity: 1.0;
+						color: #000;
+
 					}
 
 				#banner .nav-next {
