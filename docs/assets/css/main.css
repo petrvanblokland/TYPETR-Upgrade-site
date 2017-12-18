@@ -1754,7 +1754,7 @@
 		/* Content */
 
 			#content > section, #content > article {
-				margin-bottom: 7.5em;
+				margin-bottom: 2.5em;
 			}
 
 				#content > section:last-child, #content > article:last-child {
