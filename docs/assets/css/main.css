@@ -1081,8 +1081,8 @@
 	body {
 		background: #fff;
 		color: #474747;
-		font-size: 13pt;
-		line-height: 1.75em;
+		font-size: 16pt;
+		line-height: 1.55em;
 	}
 
 	a {
@@ -1108,10 +1108,13 @@
 	p, ul {
 		font-family: TYPETR-Upgrade-Book;
 		letter-spacing: 0.02em;
-		font-size: 1.1em;
-		line-height:1.5em;
+		/*font-size: 1.1em;*/
+		/*line-height:1.5em;*/
 		margin-bottom: 3em;
 	}
+	
+	
+	
 
 	form input, form select {
 		-webkit-appearance: none;
@@ -1217,7 +1220,7 @@
 	}
 
 		.blocks .one:hover {
-			background: #10b6fb;
+			background: #3F6FC0;
 		}
 
 	.blocks .two {
@@ -1752,7 +1755,6 @@
 
 			#content > section, #content > article {
 				margin-bottom: 7.5em;
-				font-size:1.2em;
 			}
 
 				#content > section:last-child, #content > article:last-child {
@@ -1778,11 +1780,12 @@
 			#content section.featured header .byline, #content article.featured header .byline {
 				font-size: 2em;
 				letter-spacing: 0;
+				line-height:1.2em;
 			}
 
 			#content section.featured header h2, #content article.featured header h2 {
 				font-size: 4em;
-				line-height:1em;
+				line-height:0.8em;
 				letter-spacing: 0;
 				margin: 0.25em 0 0.75em 0;
 			}
@@ -1800,6 +1803,8 @@
 			#sidebar h2 {
 				font-size: 1.75em;
 				letter-spacing: 0;
+				font-weight: normal;
+				font-style:normal;
 			}
 
 			#sidebar > section {
