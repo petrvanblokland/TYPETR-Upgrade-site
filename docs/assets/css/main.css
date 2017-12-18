@@ -1154,7 +1154,9 @@
 	}
 
 		.image img {
-			display: block;
+			display: inline-block;
+			width: 100%;
+
 		}
 
 	.image-fit {
@@ -1169,6 +1171,7 @@
 	.align-left {
 		float: left;
 		margin-right: 0.6em;
+		margin-bottom:2em;
 	}
 
 	.blocks a {
