@@ -17,6 +17,9 @@
 from pagebot.contexts import defaultContext as context
 from pagebot.fonttoolbox.objects.font import getFontByName
 from pagebot.style import A4, CENTER, DISPLAY_BLOCK, RIGHT, LEFT
+from pagebot import Gradient, Shadow
+
+shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
 W, H = A4
 
@@ -31,7 +34,7 @@ def buildCoverPages(w, h):
     footNoteRefStyle = dict(font='Upgrade-Book', fontSize=10, openTypeFeatures=dict(smcp=True))
     pageChapterStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=RIGHT)
     pageTitleStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=LEFT)
-
+	
     footNoteRef = 12
 
     magazineTitle = 'Magazin'
@@ -72,11 +75,14 @@ def buildCoverPages(w, h):
     # Draw image 
     context.image('docs/images/PepperTomSkirt_img0093.png', (0, 0), w=w, h=h)
     
+    # Title of cover, make it fit in with and add shadow
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)    
     R = (ML, MB, w-ML-MR, h-MB-MT)
     overFill = context.textOverflow(bs, R)
+    context.setShadow(shadow)
     context.textBox(bs, R)
-
+    context.resetShadow()
+    
     """
     pn = context.newString(66, style=coverTitleStyle)
     context.text(pn, (w/2 - pn.w/2, M/2))
