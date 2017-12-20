@@ -16,16 +16,17 @@
 #
 from pagebot.contexts import defaultContext as context
 from pagebot.fonttoolbox.objects.font import getFontByName
-from pagebot.style import A5, CENTER, DISPLAY_BLOCK, RIGHT, LEFT
+from pagebot.style import A6, CENTER, DISPLAY_BLOCK, RIGHT, LEFT
 
 h1Style = dict(font='Upgrade-Medium', fontSize=13, rLeading=1.4, tracking=0.2, paragraphBottomSpacing=13, display=DISPLAY_BLOCK)
 h2Style = dict(font='Upgrade-Medium', fontSize=11, rLeading=1.3, tracking=0.2, paragraphTopSpacing=12*1.3*0.5, display=DISPLAY_BLOCK)
-bodyStyle = dict(font='Upgrade-Book', fontSize=10, rLeading=1.3, tracking=0.2)
-pageNumberStyle = dict(font='Upgrade-Book', fontSize=9, rLeading=1.3, tracking=0.2, xTextAlign=CENTER)
-footNoteStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2)
-footNoteRefStyle = dict(font='Upgrade-Book', fontSize=10, openTypeFeatures=dict(smcp=True))
-pageChapterStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=RIGHT)
-pageTitleStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=LEFT)
+bodyStyle = dict(font='Upgrade-Book', fontSize=9, rLeading=1.3, tracking=0.2)
+pageNumberStyle = dict(font='Upgrade-Book', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=CENTER)
+footNoteStyle = dict(font='Upgrade-BookItalic', fontSize=7, rLeading=1.3, tracking=0.2)
+footNoteRefTextStyle = dict(font='Upgrade-Book', fontSize=9, openTypeFeatures=dict(sups=True))
+footNoteRefStyle = dict(font='Upgrade-Book', fontSize=9, openTypeFeatures=dict(smcp=True))
+pageChapterStyle = dict(font='Upgrade-BookItalic', fontSize=7, rLeading=1.3, tracking=0.2, xTextAlign=RIGHT)
+pageTitleStyle = dict(font='Upgrade-BookItalic', fontSize=7, rLeading=1.3, tracking=0.2, xTextAlign=LEFT)
 
 footNoteRef = 12
 
@@ -41,7 +42,7 @@ However, the fact that most designs are supposed to meet external requirements, 
 """, bodyStyle),
     (u"""How much time do you need?""", h2Style),
     (u"""The core idea behind designing the design process, is that it doesn’t make a difference for how long you do it. A project of 1 hour, basically goes through the same stages (research – design – presentation) as a project of 1 year. Of course, it does matters how long you study something, for the level of details that can be addressed. But if you only have a day or a week for an assignment, then that is part of the requirements.""", bodyStyle),
-    (context.newString(footNoteRef, style=footNoteRefStyle), None),
+    (context.newString(footNoteRef, style=footNoteRefTextStyle), None),
     (u""" The result can still be better than anything your customer would have done.
 How would you design such a design process better next time?
 """, bodyStyle),
@@ -57,6 +58,7 @@ Students that finish a training adequately, automatically get accepted for a nex
 ]
 footNoteText = u"""Repeat to improve: What makes a design process fundamentally different from a production process, is that repetition improves the result. Starting with quick sketches, ignoring most details, next steps take more time. It’s not a linear process, it’s an iterative process, which means repeating the previous step in more detail."""
 
+W, H = A6
 M = 45
 ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
 
@@ -101,7 +103,7 @@ def buildDesignPages(w, h):
 
 
 IMAGES = (
-    ('docs/documents/designPages.pdf', 300, 450, buildDesignPages),    ('docs/images/designPages.png', 300, 450, buildDesignPages),)        
+    ('docs/documents/designPages.pdf', W, H, buildDesignPages),    ('docs/images/designPages.png', W, H, buildDesignPages),)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
