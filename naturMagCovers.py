@@ -157,7 +157,7 @@ def buildCoverPages3(w, h, year):
     y = h
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=1)
+    coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=-0.05)
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
     tw, th = bs.size()  
     context.setShadow(shadow)

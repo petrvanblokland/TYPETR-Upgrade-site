@@ -94,11 +94,17 @@ def buildCoverPages(w, h):
     context.text(bs, (ML*10, y-th*0.5))
     context.resetShadow()
     
+    #context.b.lineCap('')
+    
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(0.1, 0.15, 0.7, 0.4), textStrokeWidth=3, textFill=None)
-    bs = context.newString(now().year, style=coverTitleStyle, w=w*0.75-24*M)  
+    coverTitleStyle = dict(font='Upgrade-Black', fontSize=100, textStroke=(0.2, 0.2, 0.2, 0.5), textStrokeWidth=4, textFill=None)
+    bs = context.newString('Boots', style=coverTitleStyle, w=w-ML*20)  
     tw, th = bs.size()  
-    context.text(bs, (ML*10, MB+20))
+    context.text(bs, (ML*10, 12*MB))
+    coverTitleStyle = dict(font='Upgrade-Black', fontSize=100, textStroke=(1, 0, 0.3, 0.9), textStrokeWidth=1, textFill=None)
+    bs = context.newString('Boots', style=coverTitleStyle, w=w-ML*20)  
+    tw, th = bs.size()  
+    context.text(bs, (ML*10-2, 12*MB+2))
     
     """
     pn = context.newString(66, style=coverTitleStyle)
