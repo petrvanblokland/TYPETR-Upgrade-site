@@ -18,70 +18,87 @@ from pagebot.contexts import defaultContext as context
 from pagebot.fonttoolbox.objects.font import getFontByName
 from pagebot.style import A4, CENTER, DISPLAY_BLOCK, RIGHT, LEFT
 from pagebot import Gradient, Shadow
+from pagebot.toolbox.dating import now
 
 shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
 W, H = A4
 
 def buildCoverPages(w, h):
-
-    coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
-    h1Style = dict(font='Upgrade-Medium', fontSize=13, rLeading=1.4, tracking=0.2, paragraphBottomSpacing=13, display=DISPLAY_BLOCK)
-    h2Style = dict(font='Upgrade-Medium', fontSize=11, rLeading=1.3, tracking=0.2, paragraphTopSpacing=12*1.3*0.5, display=DISPLAY_BLOCK)
-    bodyStyle = dict(font='Upgrade-Book', fontSize=10, rLeading=1.3, tracking=0.2)
-    pageNumberStyle = dict(font='Upgrade-Book', fontSize=9, rLeading=1.3, tracking=0.2, xTextAlign=CENTER)
-    footNoteStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2)
-    footNoteRefStyle = dict(font='Upgrade-Book', fontSize=10, openTypeFeatures=dict(smcp=True))
-    pageChapterStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=RIGHT)
-    pageTitleStyle = dict(font='Upgrade-BookItalic', fontSize=8, rLeading=1.3, tracking=0.2, xTextAlign=LEFT)
 	
     footNoteRef = 12
 
     magazineTitle = 'Magazin'
     chapterTitle = 'Design Design Space'
-    t = [
-        (chapterTitle, h1Style),
-        (u"""is an online coaching environment to develop your design skills. Query your questions and improve your sketching. Acquire new techniques and research your way of presentating. In short, a space where you can design your design process. What kind of challenges do you experience in your daily work as a designer? Working closely together online with experienced designers and a group of other students, there is space to define your own study topics and challenges. In fact, such a selection and planning process is an integral part of the study itself. You tell us what you want, and together we’ll find a way to get there.
-    """, bodyStyle),
-        (u"""Planning""", h2Style),
-        (u"""By definition designers are bad planners. It seems to be fundamental to design. Too optimistic in the beginning – “There is still plenty of time”, a design is never finished – “The next one will always be better”.
-    However, the fact that most designs are supposed to meet external requirements, the final deadline may have a much larger impact on the quality of the result, than the personal opinion of the designer. How do you make this apparent conflict work to your advantage?
-    """, bodyStyle),
-        (u"""How much time do you need?""", h2Style),
-        (u"""The core idea behind designing the design process, is that it doesn’t make a difference for how long you do it. A project of 1 hour, basically goes through the same stages (research – design – presentation) as a project of 1 year. Of course, it does matters how long you study something, for the level of details that can be addressed. But if you only have a day or a week for an assignment, then that is part of the requirements.""", bodyStyle),
-        (context.newString(footNoteRef, style=footNoteRefStyle), None),
-        (u""" The result can still be better than anything your customer would have done.
-    How would you design such a design process better next time?
-    """, bodyStyle),
-        (u"""1 day • 1 week • 1 month • 1 season • 1 year""", h2Style),
-        (u"""Study lengths range from 1 day, 1 week, 1 month, 1 season and possibly 1 year, whatever fits best to your plans, your practical possibilities and your financial situation.
-    """, bodyStyle),
-        (u"""What is the schedule & how to submit?""", h2Style),
-        (u"""Every 6 months, in March and September, a new day-week-month-season-year sequence starts, most likely if there is enough participating students.""", bodyStyle),
-        (u""" Day-week sequences or single day Design Games can take place on other dates during the year, if the amount of participants makes it possible. Since working as a team of students a minimum amount of three is required, and also a mininum level of quality, motivation and experience.
-    Season and year-students are admitted after showing their portfolios and the result of a given assignment. Also they are asked to write a motivation and development plan.
-    Students that finish a training adequately, automatically get accepted for a next.
-    """, bodyStyle),
-    ]
-    footNoteText = u"""Repeat to improve: What makes a design process fundamentally different from a production process, is that repetition improves the result. Starting with quick sketches, ignoring most details, next steps take more time. It’s not a linear process, it’s an iterative process, which means repeating the previous step in more detail."""
 
-    M = 2
+    M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
     cw = w-ML-MR
     
     # Page 66
     context.newPage(w, h) 
     
-    # Draw image 
+    # Draw image, covering all page, scaled.
     context.image('docs/images/PepperTomSkirt_img0093.png', (0, 0), w=w, h=h)
     
+    y = h
+    
     # Title of cover, make it fit in with and add shadow
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)    
-    R = (ML, MB, w-ML-MR, h-MB-MT)
-    overFill = context.textOverflow(bs, R)
+    style = dict(font='Upgrade-SemiboldItalic', fontSize=100, textFill=1)
+    bs = context.newString(now().fullmonthname, style=style, w=w/4)  
+    tw, th = bs.size()  
     context.setShadow(shadow)
-    context.textBox(bs, R)
+    context.text(bs, (w/2+tw/10, y-th*0.9))
     context.resetShadow()
+
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML, y-th*0.7))
+    context.resetShadow()
+    
+    y -= th
+    # Title of cover, make it fit in with and add shadow
+    style = dict(font='Upgrade-Regular', fontSize=100, textFill=(0.2, 0.2, 0.7))
+    bs = context.newString('Pepper+Tom', style=style, w=w*0.75-12*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    y -= th*0.9
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-MediumItalic', fontSize=100, textFill=(0.2, 0.25, 0.7))
+    bs = context.newString('Upgrade Fashion', style=coverTitleStyle, w=w*0.75-18*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    y -= th
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=(0.95, 0.95, 1, 0.7))
+    bs = context.newString('&', style=coverTitleStyle, w=w*0.75-30*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.6))
+    context.resetShadow()
+    
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.1, 0.15, 0.7, 0.8))
+    bs = context.newString('Models', style=coverTitleStyle, w=w*0.75-24*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(0.1, 0.15, 0.7, 0.4), textStrokeWidth=3, textFill=None)
+    bs = context.newString(now().year, style=coverTitleStyle, w=w*0.75-24*M)  
+    tw, th = bs.size()  
+    context.text(bs, (ML*10, MB+20))
     
     """
     pn = context.newString(66, style=coverTitleStyle)
@@ -112,7 +129,7 @@ def buildCoverPages(w, h):
     """
 
 IMAGES = (
-    ('docs/documents/fashionCoverPages.pdf', W, H, buildCoverPages),    ('docs/images/fashionCoverPages.png', W/2, H/2, buildCoverPages),)        
+    ('docs/documents/fashionCoverPages.pdf', W, H, buildCoverPages),    ('docs/images/fashionCoverPages.png', W*3/4, H*3/4, buildCoverPages),)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
