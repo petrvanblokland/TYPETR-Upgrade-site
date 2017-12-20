@@ -326,10 +326,13 @@ def image16(w, h):
     fs = FormattedString('#16', font=choice(upgradeFonts), fontSize=h*3/4, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2-th/2))
-        
+  
+def randomBackgroundColor():
+    return 0.3+0.2*random(),0.1+0.1*random(),0.4+0.1*random()
+  
 def slide01(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -341,7 +344,7 @@ def slide01(w, h):
         
 def slide02(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -353,7 +356,7 @@ def slide02(w, h):
         
 def slide03(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -365,7 +368,7 @@ def slide03(w, h):
         
 def slide04(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -377,7 +380,7 @@ def slide04(w, h):
         
 def slide05(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -389,7 +392,7 @@ def slide05(w, h):
         
 def slide06(w, h):
     newPage(w, h)
-    tc = 0.5*random(),0.2*random(),0.5*random()
+    tc = randomBackgroundColor()
     for n in range(200):
         fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
@@ -550,7 +553,7 @@ def zeroslash(w, h):
     text(fs, (w/2-tw/2, h-40))
       
 IMAGES = (
-    ('pic01.gif', 384, 182, image1),    ('pic02.png', 384, 182, image2),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 290, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 102, 152, image12),    ('pic13.jpg', 102, 152, image13),    ('pic14.jpg', 102, 152, image14),    ('pic15.jpg', 102, 152, image15),    ('pic16.jpg', 102, 152, image16),    ('slide01.png', 1200, 440, slide01),    ('slide02.png', 1200, 440, slide02),    ('slide03.png', 1200, 440, slide03),
+    ('pic01.gif', 384, 182, image1),    ('pic02.png', 384, 182, image2),    ('pic03.png', 384, 182, image3),    ('pic04.png', 384, 182, image4),    ('pic05.png', 282, 250, image5),    ('pic06.png', 102, 152, image6),    ('pic07.jpg', 102, 152, image7),    ('pic08.jpg', 102, 152, image8),    ('pic09.jpg', 102, 152, image9),    ('pic10.jpg', 102, 152, image10),    ('pic11.jpg', 102, 152, image11),    ('pic12.jpg', 102, 152, image12),    ('pic13.jpg', 102, 152, image13),    ('pic14.jpg', 102, 152, image14),    ('pic15.jpg', 102, 152, image15),    ('pic16.jpg', 102, 152, image16),    ('slide01.png', 1200, 440, slide01),    ('slide02.png', 1200, 440, slide02),    ('slide03.png', 1200, 440, slide03),
     ('slide04.png', 1200, 440, slide04),
     ('slide05.png', 1200, 440, slide05),
     ('slide06.png', 1200, 440, slide06),
