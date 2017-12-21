@@ -24,11 +24,12 @@ shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
 W, H = A4
 
+magazineTitle = u'Natur'
+
+
 def buildCoverPages(w, h, year):
 	
-    footNoteRef = 12
-
-    magazineTitle = 'Habit'
+    r, g, b = 0xAA/255, 0x00/255, 0x1E/255
 
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
@@ -37,37 +38,45 @@ def buildCoverPages(w, h, year):
     # Page 66
     context.newPage(w, h) 
     
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2643-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+   # Draw image, covering all page, scaled.
+    context.image('docs/images/IMG_2574-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    
+    context.save()
+    #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
+    context.fill((r, g, b, 0.8))
+    context.rect(0, h*4/5, w, h/5)
+    context.restore()
     
     y = h
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=1)
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    # PageBot bug: automatic sizing with tracking does not work now
+    #coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1, rTracking=-0.5)
+    #bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle)  
+    bs += context.newString('2', style=dict(font='Upgrade-Medium', textFill=1, fontSize=100, openTypeFeatures=dict(sups=True)))
     tw, th = bs.size()  
     context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.7))
+    context.text(bs, (M*4, y-th*0.75))
     context.resetShadow()
-
+    
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Light', fontSize=100, textFill=0.1)
-    bs = context.newString('Upgrade loveables', style=style, w=w*0.75-18*M)  
+    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    bs = context.newString('Upgraded\nPinkers', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (ML*14, y+th*0.7))
- 
-     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=1, textStrokeWidth=2, textFill=None)
-    bs = context.newString(year, style=style, w=w/2-24*M)  
-    tw, th = bs.size()  
-    context.text(bs, (w/2, MB+20))
+    context.text(bs, (w*2/3, y+th*1))
+
+   # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
+    bs = context.newString('February', style=coverTitleStyle)  
+    context.text(bs, (M*6, MB+16))
     
+   
 def buildCoverPages1(w, h, year):
 	
-    footNoteRef = 12
-
-    magazineTitle = u'Natur'
+    r, g, b = 0x18/255, 0x24/255, 0x35/255
 
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
@@ -76,35 +85,45 @@ def buildCoverPages1(w, h, year):
     # Page 66
     context.newPage(w, h) 
     
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2971-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+   # Draw image, covering all page, scaled.
+    context.image('docs/images/IMG_2643-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    
+    context.save()
+    #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
+    context.fill((r, g, b, 0.8))
+    context.rect(0, h*4/5, w, h/5)
+    context.restore()
     
     y = h
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95))
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    # PageBot bug: automatic sizing with tracking does not work now
+    #coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1, rTracking=-0.5)
+    #bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle)  
+    bs += context.newString('3', style=dict(font='Upgrade-Medium', textFill=1, fontSize=100, openTypeFeatures=dict(sups=True)))
     tw, th = bs.size()  
-    context.text(bs, (ML, y-th*0.65))
-
+    context.setShadow(shadow)
+    context.text(bs, (M*4, y-th*0.75))
+    context.resetShadow()
+    
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rLeading=1)
-    bs = context.newString('Upgrade\nServices', style=style, w=w/3.5)  
+    style = dict(font='Upgrade-Book', fontSize=100, textFill=1, rLeading=1)
+    bs = context.newString('Upgraded\nBrass & Blue', style=style, w=w/3.5)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th/2))
+    context.text(bs, (w*2/3, y+th*1.02))
 
    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
-    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-24*M)  
-    tw, th = bs.size()  
-    context.text(bs, (M*3, MB+20))
+    coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
+    bs = context.newString('March', style=coverTitleStyle)  
+    context.text(bs, (M*6, MB+16))
+    
 
 def buildCoverPages2(w, h, year):
-	
-    footNoteRef = 12
 
-    magazineTitle = u'Natur'
+    r, g, b = 0x40/255, 0x76/255, 0x1F/255
 
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
@@ -114,36 +133,46 @@ def buildCoverPages2(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1728-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    context.image('docs/images/IMG_1728-50.jpg', (-1, -10), w=w*1.02, h=h*1.045)
+    
+    context.save()
+    #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
+    context.fill((r, g, b, 0.8))
+    context.rect(0, h*4/5, w, h/5)
+    context.restore()
     
     y = h
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95))
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    # PageBot bug: automatic sizing with tracking does not work now
+    #coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1, rTracking=-0.5)
+    #bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle)  
+    bs += context.newString('8', style=dict(font='Upgrade-Medium', textFill=1, fontSize=100, openTypeFeatures=dict(sups=True)))
     tw, th = bs.size()  
-    context.text(bs, (ML, y-th*0.65))
-
+    context.setShadow(shadow)
+    context.text(bs, (M*4, y-th*0.75))
+    context.resetShadow()
+    
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rLeading=1)
-    bs = context.newString('Upgrade\nServices', style=style, w=w/3.5)  
+    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    bs = context.newString('Upgraded\nGingers', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th/2))
+    context.text(bs, (w*2/3, y+th*1))
 
    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
-    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-24*M)  
-    tw, th = bs.size()  
-    context.text(bs, (M*3, MB+20))
+    coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
+    bs = context.newString('August', style=coverTitleStyle)  
+    context.text(bs, (w*2/3, MB+12))
     
 
 def buildCoverPages3(w, h, year):
+
+    r, g, b = 0x45/255, 0x76/255, 0x76/255
+    #gradient = Gradient(start=(0, 0), end=(0, 1), locations=(0, 1), colors=((r, g, b, 0 ), (r, g, b, 1)))
 	
-    footNoteRef = 12
-
-    magazineTitle = u'Natur'
-
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
     cw = w-ML-MR
@@ -152,30 +181,39 @@ def buildCoverPages3(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_0750-50.jpg', (-14, -5), w=w*1.05)
+    context.image('docs/images/IMG_0750-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
+    
+    context.save()
+    #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
+    context.fill((r, g, b, 0.8))
+    context.rect(0, h*4/5, w, h/5)
+    context.restore()
     
     y = h
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=-0.5)
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    # PageBot bug: automatic sizing with tracking does not work now
+    #coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1, rTracking=-0.5)
+    #bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
+    coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle) 
+    bs += context.newString('9', style=dict(font='Upgrade-Medium', textFill=1, fontSize=100, openTypeFeatures=dict(sups=True)))
     tw, th = bs.size()  
     context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.6))
+    context.text(bs, (M*4, y-th*0.75))
     context.resetShadow()
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rLeading=1)
-    bs = context.newString('Upgrade\nServices', style=style, w=w/3.5)  
+    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    bs = context.newString('Upgraded\nExperience', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th/2))
+    context.text(bs, (w*2/3, y+th*1))
 
    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
-    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-24*M)  
-    tw, th = bs.size()  
-    context.text(bs, (M*3, MB+20))
+    coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
+    bs = context.newString('September', style=coverTitleStyle)  
+    context.text(bs, (w*2/3, MB+12))
     
    
 IMAGES = (
