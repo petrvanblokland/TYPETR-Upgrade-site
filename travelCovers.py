@@ -88,7 +88,7 @@ def buildCoverPages1(w, h, year):
     bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=BODY_SIZE, textFill=1, rTracking=0.01)
 
     mvText = (
-        (u'Martha’s Vineyard, as ', bodyStyle),
+        (u'Martha’s Vineyard, a ', bodyStyle),
         (u'Massachusetts ', bodyItalicStyle),
         (u'island, sits in the Atlantic just south of ', bodyStyle),
         (u'Cape Cod.', bodyItalicStyle),
