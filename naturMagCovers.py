@@ -22,7 +22,7 @@ from pagebot.toolbox.dating import now
 
 shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
-W, H = A4
+W, H = A4[0]*3/4, A4[1]*3/4
 
 magazineTitle = u'Natur'
 
@@ -39,7 +39,7 @@ def buildCoverPages(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2574-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    context.image('docs/images/IMG_2574-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -63,7 +63,7 @@ def buildCoverPages(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=32, textFill=1, rLeading=1.1)
+    style = dict(font='Upgrade-Book', fontSize=h/21, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nPinkers', style=style)  
     tw, th = bs.size()  
     context.text(bs, (w*2/3, y+th*0.95))
@@ -86,7 +86,7 @@ def buildCoverPages1(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2643-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    context.image('docs/images/IMG_2643-50.jpg', (-70, 0), w=w*1.2, h=h*1.045)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -110,7 +110,7 @@ def buildCoverPages1(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=32, textFill=1, rLeading=1.1)
+    style = dict(font='Upgrade-Book', fontSize=h/21, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nBrass & Blue', style=style)  
     tw, th = bs.size()  
     context.text(bs, (w*2/3, y+th*0.95))
@@ -133,7 +133,7 @@ def buildCoverPages2(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1728-50.jpg', (-1, -10), w=w*1.02, h=h*1.045)
+    context.image('docs/images/IMG_1728-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -157,7 +157,7 @@ def buildCoverPages2(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=30, textFill=1, rLeading=1.1)
+    style = dict(font='Upgrade-Book', fontSize=h/21, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nGingers', style=style)  
     tw, th = bs.size()  
     context.text(bs, (w*2/3, y+th*0.95))
@@ -181,7 +181,7 @@ def buildCoverPages3(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_0750-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
+    context.image('docs/images/IMG_0750-50.jpg', (-20, -10), w=w*1.2, h=h*1.045)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -205,7 +205,7 @@ def buildCoverPages3(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=30, textFill=1, rLeading=1.1)
+    style = dict(font='Upgrade-Book', fontSize=h/21, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nExperience', style=style)  
     tw, th = bs.size()  
     context.text(bs, (w*2/3, y+th*0.95))
@@ -217,7 +217,7 @@ def buildCoverPages3(w, h, year):
     
    
 IMAGES = (
-    ('docs/documents/naturCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/naturCoverPages.png', W*3/4, H*3/4, now().year, buildCoverPages),    ('docs/documents/naturCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/naturCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),    ('docs/documents/naturCoverPages2.pdf', W, H, now().year+1, buildCoverPages2),    ('docs/images/naturCoverPages2.png', W*3/4, H*3/4, now().year+1, buildCoverPages2),    ('docs/documents/naturCoverPages3.pdf', W, H, now().year+1, buildCoverPages3),    ('docs/images/naturCoverPages3.png', W*3/4, H*3/4, now().year+1, buildCoverPages3),)        
+    ('docs/documents/naturCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/naturCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/naturCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/naturCoverPages1.png', W, H, now().year+1, buildCoverPages1),    ('docs/documents/naturCoverPages2.pdf', W, H, now().year+1, buildCoverPages2),    ('docs/images/naturCoverPages2.png', W, H, now().year+1, buildCoverPages2),    ('docs/documents/naturCoverPages3.pdf', W, H, now().year+1, buildCoverPages3),    ('docs/images/naturCoverPages3.png', W, H, now().year+1, buildCoverPages3),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
