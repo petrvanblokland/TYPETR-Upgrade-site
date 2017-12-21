@@ -94,7 +94,7 @@ def buildCoverPages1(w, h, year):
         (u'Cape Cod.', bodyItalicStyle),
         (u' A longtime ', bodyStyle),
         (u'New England ', bodyItalicStyle),
-        (u'summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
+        (u'summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
         (u'Vineyard Haven,', bodyItalicStyle),
         (u' on the eastern end, is a ferry port and the island’s commercial center. ', bodyStyle),
         (u'Oak Bluffs', bodyItalicStyle),
