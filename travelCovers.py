@@ -35,7 +35,7 @@ def buildCoverPages(w, h, year):
 
     mvText = (
         (u'Martha’s Vineyard, a', bodyStyle),
-        (u'Massachusetts', bodyItalicStyle),
+        (u' Massachusetts', bodyItalicStyle),
         (u' island, sits in the Atlantic just south of ', bodyStyle),
         (u'Cape Cod.', bodyItalicStyle),
         (u' A longtime New England summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
@@ -83,13 +83,14 @@ def buildCoverPages(w, h, year):
 
   
 def buildCoverPages1(w, h, year):
-    bodyStyle = dict(font='Upgrade-Light', fontSize=26, textFill=1, rTracking=0.01)
-    bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=26, textFill=1, rTracking=0.01)
+    BODY_SIZE = 42
+    bodyStyle = dict(font='Upgrade-Light', fontSize=BODY_SIZE, textFill=1, rTracking=0.01)
+    bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=BODY_SIZE, textFill=1, rTracking=0.01)
 
     mvText = (
-        (u'Martha’s Vineyard, a', bodyStyle),
-        (u'Massachusetts', bodyItalicStyle),
-        (u' island, sits in the Atlantic just south of ', bodyStyle),
+        (u'Martha’s Vineyard, as ', bodyStyle),
+        (u'Massachusetts ', bodyItalicStyle),
+        (u'island, sits in the Atlantic just south of ', bodyStyle),
         (u'Cape Cod.', bodyItalicStyle),
         (u' A longtime New England summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
         (u'Vineyard Haven,', bodyItalicStyle),
@@ -123,7 +124,7 @@ def buildCoverPages1(w, h, year):
     tw, th = bs.size()  
     context.text(bs, (0, y-th/2))
 
-    coverTitleStyle = dict(font='Upgrade-Hairline', fontSize=52, textFill=1, rLeading=0.8)
+    coverTitleStyle = dict(font='Upgrade-Thin', fontSize=52, textFill=1, rLeading=0.8)
     bs = context.newString(magazineTitle1, style=coverTitleStyle, w=w/3-4*M)  
     tw, th = bs.size()  
     context.text(bs, (w-4*M-tw, y-th*1.1))
@@ -136,7 +137,7 @@ def buildCoverPages1(w, h, year):
 
    
 IMAGES = (
-    ('docs/documents/travelCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/travelCoverPages.png', W, H, now().year, buildCoverPages),    #('docs/documents/travelCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    #('docs/images/travelCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
+    ('docs/documents/travelCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/travelCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/travelCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/travelCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
