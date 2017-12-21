@@ -12,7 +12,7 @@
 #     Supporting usage of Flat, https://github.com/xxyxyz/flat
 # -----------------------------------------------------------------------------
 #
-#     publications.py
+#     bookCovers.py
 #
 from pagebot.contexts import defaultContext as context
 from pagebot.fonttoolbox.objects.font import getFontByName
