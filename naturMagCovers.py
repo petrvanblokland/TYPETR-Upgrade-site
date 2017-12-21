@@ -63,10 +63,10 @@ def buildCoverPages(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    style = dict(font='Upgrade-Book', fontSize=32, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nPinkers', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th*1))
+    context.text(bs, (w*2/3, y+th*0.95))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
@@ -110,10 +110,10 @@ def buildCoverPages1(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1, rLeading=1)
-    bs = context.newString('Upgraded\nBrass & Blue', style=style, w=w/3.5)  
+    style = dict(font='Upgrade-Book', fontSize=32, textFill=1, rLeading=1.1)
+    bs = context.newString('Upgraded\nBrass & Blue', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th*1.02))
+    context.text(bs, (w*2/3, y+th*0.95))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
@@ -157,10 +157,10 @@ def buildCoverPages2(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    style = dict(font='Upgrade-Book', fontSize=30, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nGingers', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th*1))
+    context.text(bs, (w*2/3, y+th*0.95))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
@@ -205,10 +205,10 @@ def buildCoverPages3(w, h, year):
     
     y -= th
     # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-Book', fontSize=31, textFill=1, rLeading=1)
+    style = dict(font='Upgrade-Book', fontSize=30, textFill=1, rLeading=1.1)
     bs = context.newString('Upgraded\nExperience', style=style)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th*1))
+    context.text(bs, (w*2/3, y+th*0.95))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=28, textFill=1)
