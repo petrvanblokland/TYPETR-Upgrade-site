@@ -134,8 +134,91 @@ def buildCoverPages(w, h):
     context.text(pn, (w/2 - pn.w/2, M/2))
     """
 
+
+def buildCoverPages1(w, h):
+	
+    footNoteRef = 12
+
+    magazineTitle = 'Magazin'
+    chapterTitle = 'Design Design Space'
+
+    M = 2 # Margin
+    ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
+    cw = w-ML-MR
+    
+    # Page 66
+    context.newPage(w, h) 
+    
+    # Draw image, covering all page, scaled.
+    context.image('docs/images/IMG_2000-50.jpg', (0, 0), h=h)
+    
+    y = h
+    
+    # Title of cover, make it fit in with and add shadow
+    style = dict(font='Upgrade-SemiboldItalic', fontSize=100, textFill=1)
+    bs = context.newString(now().fullmonthname, style=style, w=w/4)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (w/2+tw/10, y-th*0.9))
+    context.resetShadow()
+
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
+    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML, y-th*0.7))
+    context.resetShadow()
+    
+    y -= th
+    # Title of cover, make it fit in with and add shadow
+    style = dict(font='Upgrade-Regular', fontSize=100, textFill=(0.2, 0.2, 0.7))
+    bs = context.newString('Pepper+Tom', style=style, w=w*0.75-12*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    y -= th*0.9
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-MediumItalic', fontSize=100, textFill=(0.2, 0.25, 0.7))
+    bs = context.newString('Upgrade Fashion', style=coverTitleStyle, w=w*0.75-18*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    y -= th
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=(0.95, 0.95, 1, 0.7))
+    bs = context.newString('&', style=coverTitleStyle, w=w*0.75-30*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.6))
+    context.resetShadow()
+    
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.1, 0.15, 0.7, 0.8))
+    bs = context.newString('Models', style=coverTitleStyle, w=w*0.75-24*M)  
+    tw, th = bs.size()  
+    context.setShadow(shadow)
+    context.text(bs, (ML*10, y-th*0.5))
+    context.resetShadow()
+    
+    #context.b.lineCap('')
+    
+    # Title of cover, make it fit in with and add shadow
+    coverTitleStyle = dict(font='Upgrade-Black', fontSize=100, textStroke=(0.2, 0.2, 0.2, 0.5), textStrokeWidth=4, textFill=None)
+    bs = context.newString('Boots', style=coverTitleStyle, w=w-ML*20)  
+    tw, th = bs.size()  
+    context.text(bs, (ML*10, 12*MB))
+    coverTitleStyle = dict(font='Upgrade-Black', fontSize=100, textStroke=(1, 0, 0.3, 0.9), textStrokeWidth=1, textFill=None)
+    bs = context.newString('Boots', style=coverTitleStyle, w=w-ML*20)  
+    tw, th = bs.size()  
+    context.text(bs, (ML*10-2, 12*MB+2))
+ 
 IMAGES = (
-    ('docs/documents/fashionCoverPages.pdf', W, H, buildCoverPages),    ('docs/images/fashionCoverPages.png', W*3/4, H*3/4, buildCoverPages),)        
+    #('docs/documents/fashionCoverPages.pdf', W, H, buildCoverPages),    #('docs/images/fashionCoverPages.png', W*3/4, H*3/4, buildCoverPages),    ('docs/documents/fashionCoverPages1.pdf', W, H, buildCoverPages1),    ('docs/images/fashionCoverPages1.png', W*3/4, H*3/4, buildCoverPages1),)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
