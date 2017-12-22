@@ -22,12 +22,10 @@ from pagebot.toolbox.dating import now
 
 shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
-W, H = A4
+W, H = A4[0]*3/4, A4[1]*3/4
 
 def buildCoverPages(w, h, year):
 	
-    footNoteRef = 12
-
     magazineTitle = 'Habit'
 
     M = 2 # Margin
@@ -37,8 +35,8 @@ def buildCoverPages(w, h, year):
     # Page 66
     context.newPage(w, h) 
     
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_0672-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    # Draw image, covering all page, scaled. Disproportional scale.
+    context.image('docs/images/IMG_0672-50.jpg', (-150, -5), w=w*1.07, h=h*1.05)
     
     y = h
     
@@ -102,7 +100,7 @@ def buildCoverPages1(w, h, year):
     
 
 IMAGES = (
-    ('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/habitCoverPages.png', W*3/4, H*3/4, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),)        
+    #('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    #('docs/images/habitCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
