@@ -66,21 +66,21 @@ def buildCoverPages1(w, h):
 
     y = h*5/6
 
-    style = dict(font='Upgrade-HairlineItalic', fontSize=64, textFill=0, rLeading=0.95)
+    style = dict(font='Upgrade-HairlineItalic', fontSize=64, textFill=0, rLeading=1)
     bs = context.newString('Upgrade\nHairlines', style=style)  
     tw, th = bs.size()  
     context.text(bs, (M*4, y-th*0.5))
     
-    y -= th*1.2
-    style = dict(font='Upgrade-Bold', fontSize=40, textFill=(1, 0.95, 0.95, 1), rTracking=0.1, rLeading=0.9)
-    bs = context.newString(u'COUNTERS\n& CURVES', style=style, w=w/2)  
+    y -= th*1.1
+    style = dict(font='Upgrade-Semibold', fontSize=40, textFill=TYPETR_COLOR+[0.8], rTracking=0.05, rLeading=0.7, openTypeFeatures=dict(smcp=True))
+    bs = context.newString(u'counters\n& curves', style=style, w=w/2)  
     tw, th = bs.size()  
     context.setShadow(shadow)
     context.text(bs, (M*6, y-th*0.5))
     context.resetShadow()
     
 
-    y -= th*1.4
+    y -= th*1.3
     style = dict(font='Upgrade-Black', fontSize=60, textFill=None, textStroke=(0, 0, 0, 0.5), textStrokeWidth=1, rTracking=-0.01)
     bs = context.newString('BLACK', style=style)  
     tw, th = bs.size()  
@@ -94,10 +94,10 @@ def buildCoverPages1(w, h):
     
     y -= th*0.85
     style = dict(font='Upgrade-Regular', fontSize=100, textFill=(1, 1, 1, 0.95), rTracking=0.02)
-    bs = context.newString('Typographic Solutions', style=style, w=w-8*M)  
+    bs = context.newString('Typographic Solutions', style=style, w=w-9*M)  
     tw, th = bs.size()  
     context.setShadow(shadow)
-    context.text(bs, (3*M, h/8))
+    context.text(bs, (4*M, h/8.5))
     context.resetShadow()
     
     style = dict(font='Upgrade-Black', fontSize=100, textFill=(1, 1, 1, 0.95), rTracking=0.2)
