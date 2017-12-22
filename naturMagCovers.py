@@ -39,7 +39,7 @@ def buildCoverPages(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2574-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
+    context.image('docs/images/IMG_2574-50.jpg', (-1, -10), h=h+20)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -86,7 +86,7 @@ def buildCoverPages1(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2643-50.jpg', (-70, 0), w=w*1.2, h=h*1.045)
+    context.image('docs/images/IMG_2643-50.jpg', (-170, 0), h=h)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -133,12 +133,12 @@ def buildCoverPages2(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1728-50.jpg', (-1, -10), w=w*1.2, h=h*1.045)
+    context.image('docs/images/IMG_1728-50.jpg', (-100, -10), h=h+20)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
     context.fill((r, g, b, 0.8))
-    context.rect(0, h*4/5, w, h/5)
+    context.rect(0, h*4/5, w, h/4)
     context.restore()
     
     y = h
@@ -181,12 +181,12 @@ def buildCoverPages3(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_0750-50.jpg', (-20, -10), w=w*1.2, h=h*1.045)
+    context.image('docs/images/IMG_0750-50.jpg', (-w/2, -8), h=h+16)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
     context.fill((r, g, b, 0.8))
-    context.rect(0, h*4/5, w, h/5)
+    context.rect(0, h*4/5, w, h/4)
     context.restore()
     
     y = h
