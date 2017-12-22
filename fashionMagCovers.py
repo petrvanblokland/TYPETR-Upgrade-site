@@ -72,7 +72,7 @@ def buildCoverPages1(w, h):
     context.text(bs, (M*4, y-th*0.5))
     
     y -= th*1.1
-    style = dict(font='Upgrade-Semibold', fontSize=40, textFill=TYPETR_COLOR+[0.8], rTracking=0.05, rLeading=0.7, openTypeFeatures=dict(smcp=True))
+    style = dict(font='Upgrade-Semibold', fontSize=40, textFill=TYPETR_COLOR+[0.8], rTracking=0.01, rLeading=0.7, openTypeFeatures=dict(smcp=True))
     bs = context.newString(u'counters\n& curves', style=style, w=w/2)  
     tw, th = bs.size()  
     context.setShadow(shadow)
