@@ -61,7 +61,7 @@ def buildCoverPages1(w, h):
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)  
     tw, th = bs.size()  
     context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.7))
+    context.text(bs, (ML, y-th*0.6))
     context.resetShadow()
 
     y = h*5/6
