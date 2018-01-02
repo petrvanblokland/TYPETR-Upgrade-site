@@ -28,8 +28,8 @@ magazineTitle1 = u'Travel'
 
 def buildCoverPages(w, h, year):
 	
-    bodyStyle = dict(font='Upgrade-Book', fontSize=26, textFill=1, rTracking=0.03)
-    bodyItalicStyle = dict(font='Upgrade-BookItalic', fontSize=26, textFill=1, rTracking=0.03)
+    bodyStyle = dict(font='Upgrade-Light', fontSize=26, textFill=1, rTracking=0.03)
+    bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=26, textFill=1, rTracking=0.03)
 
     magazineTitle2 = u'OSAKA'
 
@@ -109,7 +109,7 @@ def buildCoverPages1(w, h, year):
         (u'Cape Cod.', bodyItalicStyle),
         (u' A longtime ', bodyStyle),
         (u'New England ', bodyItalicStyle),
-        (u'summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
+        (u'summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
         (u'Vineyard Haven,', bodyItalicStyle),
         (u' on the eastern end, is a ferry port and the island’s commercial center. ', bodyStyle),
         (u'Oak Bluffs', bodyItalicStyle),
@@ -145,11 +145,17 @@ def buildCoverPages1(w, h, year):
     bs = context.newString(magazineTitle1, style=coverTitleStyle, w=w/3-4*M)  
     tw, th = bs.size()  
     context.text(bs, (w-4*M-tw, y-th*1.1))
+
+    # Draw textBox background color and frame.
+    context.save()
+    context.fill((1, 1, 1, 0.3))
+    context.rect(0, 0, w, h/3-10*M)
+    context.restore()
       
    # Title of cover, make it fit in with and add shadow
     bs = context.newText(mvText)  
     tw, th = context.textSize(bs, w=w-M*20)
-    context.textBox(bs, (M*10, M*30, w-M*20, th))
+    context.textBox(bs, (M*10, M*20, w-M*20, th))
 
    
 IMAGES = (
