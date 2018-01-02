@@ -28,8 +28,8 @@ magazineTitle = u'Natur'
 
 
 def buildCoverPages(w, h, year):
-	
-    r, g, b = 0xAA/255, 0x00/255, 0x1E/255
+
+    r, g, b = 0x50/255, 0x80/255, 0xc0/255
 
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
@@ -39,7 +39,7 @@ def buildCoverPages(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2574-50.jpg', (-1, -10), h=h+20)
+    context.image('docs/images/IMG_0735-50.jpg', (-1, -10), h=h+20)
     
     context.save()
     #context.setGradient(gradient, (0, h*3/4), w, h/5) # Add self to define start/end from relative size.
@@ -64,7 +64,7 @@ def buildCoverPages(w, h, year):
     y -= th
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Book', fontSize=h/21, textFill=1, rLeading=1.1)
-    bs = context.newString('Upgraded\nPinkers', style=style)  
+    bs = context.newString('Upgraded\nBranches', style=style)  
     tw, th = bs.size()  
     context.text(bs, (w*2/3, y+th*1.33))
 

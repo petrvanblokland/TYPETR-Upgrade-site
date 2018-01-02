@@ -25,24 +25,22 @@ shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 W, H = A4[0], A4[1]
 
 magazineTitle1 = u'Travel'
-magazineTitle2 = u'Martha’s\nVineyard'
-
 
 def buildCoverPages(w, h, year):
 	
-    bodyStyle = dict(font='Upgrade-Light', fontSize=26, textFill=1, rTracking=0.01)
-    bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=26, textFill=1, rTracking=0.01)
+    bodyStyle = dict(font='Upgrade-Book', fontSize=26, textFill=1, rTracking=0.03)
+    bodyItalicStyle = dict(font='Upgrade-BookItalic', fontSize=26, textFill=1, rTracking=0.03)
 
-    mvText = (
-        (u'Martha’s Vineyard, a', bodyStyle),
-        (u' Massachusetts', bodyItalicStyle),
-        (u' island, sits in the Atlantic just south of ', bodyStyle),
-        (u'Cape Cod.', bodyItalicStyle),
-        (u' A longtime New England summer colony, it encompasses harbor towns and lighthouses, sandy beaches and farmland.\n\n\n\nIt’s accessible only by boat or air. ', bodyStyle),
-        (u'Vineyard Haven,', bodyItalicStyle),
-        (u' on the eastern end, is a ferry port and the island’s commercial center. ', bodyStyle),
-        (u'Oak Bluffs', bodyItalicStyle),
-        (u' has Carpenter Gothic cottages and an iconic carousel.', bodyStyle)
+    magazineTitle2 = u'OSAKA'
+
+    osakaText = (
+        (u"""Whilst """, bodyStyle),
+        (u"""Tokyo""", bodyItalicStyle),
+        (u""" is the popular big city for tourists, """, bodyStyle),
+        (u"""Osaka""", bodyItalicStyle),
+        (u""" is the darling sister, holding a charm that can’t be denied. It has all the culture, attractions and delicious food you can expect from a Japanese city, though with the bonus of less crowded places.\nPerfect for families, or those who prefer a slightly quieter, but still fulfilling, Japanese holiday, """, bodyStyle),
+        (u"""Osaka""", bodyItalicStyle),
+        (u""" is the place to visit.""", bodyStyle),
     )
 	 
     r, g, b = 0x18/255, 0x24/255, 0x35/255
@@ -55,7 +53,7 @@ def buildCoverPages(w, h, year):
     context.newPage(w, h) 
     
    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_2971-50.jpg', (0, 0), w=w*1, h=h*1)
+    context.image('docs/images/IMG_3691-50.jpg', (-400, -200), h=h*1.1)
      
     y = h
     
@@ -63,23 +61,40 @@ def buildCoverPages(w, h, year):
     # PageBot bug: automatic sizing with tracking does not work now
     #coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1, rTracking=-0.5)
     #bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
-    coverTitleStyle = dict(font='Upgrade-Semibold', fontSize=130, textFill=(0x38/255, 0x75/255, 0xCF/255, 0.6), rLeading=0.8)
-    bs = context.newString(u'Martha’s\n', style=coverTitleStyle, w=w-M)  
-    coverTitleStyle = dict(font='Upgrade-Semibold', fontSize=130, textFill=(0x5E/255, 0x9D/255, 0xEE/255, 0.4), rLeading=0.8)
-    bs += context.newString(u'Vineyard', style=coverTitleStyle, w=w-2*M)  
+    coverTitleStyle = dict(font='Upgrade-Semibold', fontSize=130, textFill=(1, 1, 1, 0.3), rLeading=0.8)
+    bs = context.newString(magazineTitle2, style=coverTitleStyle, w=w-M)  
     tw, th = bs.size()  
-    context.text(bs, (0, y-th/2))
+    context.text(bs, (0, y-th))
 
-    coverTitleStyle = dict(font='Upgrade-Hairline', fontSize=52, textFill=1, rLeading=0.8)
+    y -= th*1/3
+    coverTitleStyle = dict(font='Upgrade-Light', fontSize=52, textFill=1, rLeading=0.8)
     bs = context.newString(magazineTitle1, style=coverTitleStyle, w=w/3-4*M)  
     tw, th = bs.size()  
-    context.text(bs, (w-4*M-tw, y-th*1.1))
+    context.text(bs, (w-4*M-tw, y-th*2))
+      
+    y -= th*1.7
+    coverTitleStyle = dict(font='Upgrade-LightItalic', fontSize=52, textFill=1, rLeading=0.8, rTracking=0.03)
+    bs = context.newString('Upgrade destinations', style=coverTitleStyle, w=w/2)  
+    tw, th = bs.size()  
+    context.text(bs, (w-4*M-tw, y-th*2))
+      
+    y -= th*1.8
+    coverTitleStyle = dict(font='Upgrade-Book', fontSize=22, textFill=1, rLeading=0.8, rTracking=0.08, openTypeFeatures=dict(smcp=True))
+    bs = context.newString('Enjoying size & weight', style=coverTitleStyle)  
+    tw, th = bs.size()  
+    context.text(bs, (w-4*M-tw, y-th*2))
       
    # Title of cover, make it fit in with and add shadow
-    bs = context.newText(mvText)  
+    bs = context.newText(osakaText)  
     tw, th = context.textSize(bs, w=w-M*20)
-    context.textBox(bs, (M*10, M*20, w-M*20, th))
-    
+    # Draw textBox background color and frame.
+    context.save()
+    context.fill((0, 0.3, 0, 0.7))
+    context.rect(0, 0, w, th+20*M)
+    context.restore()
+      
+    context.textBox(bs, (M*10, M*12, w-M*20, th))
+
 
   
 def buildCoverPages1(w, h, year):
@@ -135,7 +150,6 @@ def buildCoverPages1(w, h, year):
     bs = context.newText(mvText)  
     tw, th = context.textSize(bs, w=w-M*20)
     context.textBox(bs, (M*10, M*30, w-M*20, th))
-    
 
    
 IMAGES = (
