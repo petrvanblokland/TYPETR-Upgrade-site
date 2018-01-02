@@ -35,7 +35,7 @@ def buildBusinessCard1(w, h):
     
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Regular', fontSize=14, textFill=1, xTextAlign=CENTER)
-    styleTitle = dict(font='Upgrade-RegularItalic', fontSize=10, textFill=1, xTextAlign=CENTER)
+    styleTitle = dict(font='Upgrade-Italic', fontSize=10, textFill=1, xTextAlign=CENTER)
     styleEmail = dict(font='Upgrade-Light', fontSize=8, textFill=1, xTextAlign=CENTER, leading=10, rTracking=0.02)
     bs = context.newString('Petr van Blokland\n', style=style)  
     bs += context.newString('Designer | Educator | Founder\n', style=styleTitle)  
@@ -62,7 +62,7 @@ def buildBusinessCard2(w, h):
     
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Regular', fontSize=14, textFill=1, xTextAlign=CENTER)
-    styleTitle = dict(font='Upgrade-RegularItalic', fontSize=10, textFill=(0xEC/255, 0x3E/255, 0x2B/255), xTextAlign=CENTER)
+    styleTitle = dict(font='Upgrade-Italic', fontSize=10, textFill=(0xEC/255, 0x3E/255, 0x2B/255), xTextAlign=CENTER)
     styleEmail = dict(font='Upgrade-Light', fontSize=8, textFill=1, xTextAlign=CENTER, leading=10, rTracking=0.02)
     bs = context.newString('Claudia Mens\n', style=style)  
     bs += context.newString('Designer | Educator | Founder\n', style=styleTitle)
@@ -70,7 +70,7 @@ def buildBusinessCard2(w, h):
     tw, th = bs.size()  
     context.textBox(bs, (w/2-tw/2, h/2-th/2, tw, th))
  
-    styleLogo = dict(font='Upgrade-Thin', fontSize=14, textFill=1)
+    styleLogo = dict(font='Upgrade-Thin', fontSize=14, textFill=1, openTypeFeatures=dict(case=True))
     bs = context.newString('PEPPER+TOM', style=styleLogo, w=w)
     context.text(bs, (0, M))  
 
