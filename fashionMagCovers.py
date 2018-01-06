@@ -61,7 +61,7 @@ def buildCoverPages1(w, h):
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)  
     tw, th = bs.size()  
     context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.7))
+    context.text(bs, (ML, y-th*0.6))
     context.resetShadow()
 
     y = h*5/6
@@ -338,7 +338,7 @@ def buildCoverPages4(w, h):
     context.resetShadow()
     
 IMAGES = (
-    ('docs/documents/fashionCoverPages1.pdf', W, H, buildCoverPages1),    ('docs/images/fashionCoverPages1.png', W, H, buildCoverPages1),    #('docs/documents/fashionCoverPages2.pdf', W, H, buildCoverPages2),    #('docs/images/fashionCoverPages2.png', W, H, buildCoverPages2),    #('docs/documents/fashionCoverPages3.pdf', W, H, buildCoverPages3),    #('docs/images/fashionCoverPages3.png', W, H, buildCoverPages3),    #('docs/documents/fashionCoverPages4.pdf', W, H, buildCoverPages4),    #('docs/images/fashionCoverPages4.png', W, H, buildCoverPages4),)        
+    ('docs/documents/fashionCoverPages1.pdf', W, H, buildCoverPages1),    ('docs/images/fashionCoverPages1.png', W, H, buildCoverPages1),    ('docs/documents/fashionCoverPages2.pdf', W, H, buildCoverPages2),    ('docs/images/fashionCoverPages2.png', W, H, buildCoverPages2),    ('docs/documents/fashionCoverPages3.pdf', W, H, buildCoverPages3),    ('docs/images/fashionCoverPages3.png', W, H, buildCoverPages3),    ('docs/documents/fashionCoverPages4.pdf', W, H, buildCoverPages4),    ('docs/images/fashionCoverPages4.png', W, H, buildCoverPages4),)        
       
 for path, w, h, m in IMAGES:
     newDrawing()

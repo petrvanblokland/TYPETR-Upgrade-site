@@ -50,9 +50,24 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	img.SingleImageAlignLeft {
+		border: solid 0.5px #808080;
+		margin-bottom:1em;
+		float:left;
+	}
+	
+	img.SingleImageAlignRight {
+		border: solid 0.5px #808080;
+		margin-bottom:1em;
+		float:right;
+	}
+	
+
+
 	img.spreadPageLeft {
 		border: solid 0.5px #808080;
 	}
+	
 	img.spreadPageRight {
 		border-top: solid 0.5px #808080;
 		border-left: solid 0.5px white;

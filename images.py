@@ -56,12 +56,12 @@ for fontName in installedFonts():
         upgradeFonts.append(fontName)  
 print upgradeFonts
 UpgradeWeightsItalic = (
-    'Upgrade-HairlineItalic',    'Upgrade-ThinItalic',    'Upgrade-ExtraLightItalic',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-RegularItalic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',    'Upgrade-ExtraBlackItalic',    'Upgrade-UltraBlackItalic',)
+    'Upgrade-HairlineItalic',    'Upgrade-ThinItalic',    'Upgrade-ExtraLightItalic',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-Italic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',    'Upgrade-ExtraBlackItalic',    'Upgrade-UltraBlackItalic',)
 UpgradeWeights = (    'Upgrade-Hairline',    'Upgrade-Thin',    'Upgrade-ExtraLight',    'Upgrade-Light',    'Upgrade-Book',    'Upgrade-Regular',    'Upgrade-Medium',    'Upgrade-Semibold',    'Upgrade-Bold',    'Upgrade-Black',    'Upgrade-ExtraBlack',    'Upgrade-UltraBlack',)
 masterWeights = (
     'Upgrade-Hairline',    'Upgrade-Light',    'Upgrade-Medium',    'Upgrade-Bold',    'Upgrade-UltraBlack',    
 )
-UpgradeMiddleWeights = (    'Upgrade-Light',    'Upgrade-Book',    'Upgrade-Regular',    'Upgrade-Medium',    'Upgrade-Semibold',    'Upgrade-Bold',    'Upgrade-Black',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-RegularItalic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',)
+UpgradeMiddleWeights = (    'Upgrade-Light',    'Upgrade-Book',    'Upgrade-Regular',    'Upgrade-Medium',    'Upgrade-Semibold',    'Upgrade-Bold',    'Upgrade-Black',    'Upgrade-LightItalic',    'Upgrade-BookItalic',    'Upgrade-Italic',    'Upgrade-MediumItalic',    'Upgrade-SemiboldItalic',    'Upgrade-BoldItalic',    'Upgrade-BlackItalic',)
 
 def image1(w, h):
     for frame in range(len(UpgradeWeights)):
@@ -227,7 +227,7 @@ def image8(w, h):
     r, g, b = 0.1*random(),0.1*random(),0.5*random()
     fill(r, g, b)
     rect(0, 0, w, h)
-    fs = FormattedString('Using\nUpgrade', font='Upgrade-RegularItalic', fontSize=22, fill=1, lineHeight=24)
+    fs = FormattedString('Using\nUpgrade', font='Upgrade-Italic', fontSize=22, fill=1, lineHeight=24)
     fs += FormattedString('\n\n     OK', font='Upgrade-Medium', fontSize=22, fill=1)
     tw, th = textSize(fs)
     text(fs, (12, h-30))

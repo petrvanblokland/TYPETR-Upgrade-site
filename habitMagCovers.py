@@ -75,7 +75,7 @@ def buildCoverPages1(w, h, year):
     context.newPage(w, h) 
     
     # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_3076-50.jpg', (-14, -5), w=w*1.05, h=h*1.05)
+    context.image('docs/images/IMG_3076-50.jpg', (-14, -145), h=h*1.05)
     
     y = h
     
@@ -83,14 +83,14 @@ def buildCoverPages1(w, h, year):
     coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95))
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
     tw, th = bs.size()  
-    context.text(bs, (ML, y-th*0.65))
+    context.text(bs, (ML, y-th*0.55))
 
     y -= th
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rLeading=1)
-    bs = context.newString('Upgrade\nServices', style=style, w=w/3.5)  
+    bs = context.newString('Upgrade\nServices', style=style, w=w/4)  
     tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th/2))
+    context.text(bs, (w*2/3, y+th*1.2))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
@@ -100,7 +100,7 @@ def buildCoverPages1(w, h, year):
     
 
 IMAGES = (
-    #('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    #('docs/images/habitCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
+    ('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/habitCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
