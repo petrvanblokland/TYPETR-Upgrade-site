@@ -32,7 +32,7 @@ leading, straight, stem, stroke, connect, ascender, lowercase, letters, vertical
 x-height, marking, height, font, axis, stress, baseline, bowl, bracket, cap height, headline,
 subhead, footnote, reference, component, accent, robofont, scripting, exhibition, photography,
 identity, application, trafic, logo, logotype, line, baseline, baseline-J, TYPETR Upgrade,
-crossbar, italic, glyph, character, number, letter, mark, symbol, grotesk, hairline, typography,
+crossbar, Italic, glyph, character, number, letter, mark, symbol, grotesk, hairline, typography,
 lightest, font, family, weight, thinnest, stroke, hinting, hook, ink trap, joint, juncture,
 kerning, space, pairs of letters, linespacing, ligature, loop, lobe, hanging figures, projection,
 overshoot, point size, em size, roman, typography, shoulder, stacked, page, column, margin,
@@ -83,14 +83,16 @@ def buildStackedWords1(w, h, numPages):
         y = h - M
         i = 0
         while y > M:
+            features = dict(ss08=True)
             word = TYPOGRAPHIC_WORDS[i]
-            if word[0].upper() != word[0]: # Keep words in caps, if already in caps.
+            if word[0].upper() != word[0] or word[-1].upper() != word[-1]: # Keep words in caps, if already in caps.
                 word = word.capitalize()
             word += ' ' + TYPOGRAPHIC_WORDS[i+1]
             if len(word) < 16 or random() < 0.4:
                 word = word.upper()
+                features['case'] = True # Hyphens on cap level.
             bs = context.newString(word, style=dict(font=fontNames[-i],textFill=0, rLeading=1,
-                openTypeFeatures=dict(ss08=True)), w=w-2*M)
+                openTypeFeatures=features), w=w-2*M)
             bx, by, bw, bh = bs.bounds()
             if y - bh + by < M:
                 break
@@ -110,7 +112,7 @@ def buildStackedWords1(w, h, numPages):
         
         
 IMAGES = (
-    ('docs/documents/stackedTypePages.pdf', W, H, 8, buildStackedWords1),    ('docs/images/stackedTypePages.png', W, H, 8, buildStackedWords1),    ('docs/images/stackedTypePages.gif', W, H, 8, buildStackedWords1),    ('docs/images/stackedTypePagesSmall.png', 400, 600, 6, buildStackedWords1),    ('docs/images/stackedTypePagesSmall.gif', 400, 600, 6, buildStackedWords1),    #('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    #('docs/images/habitCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),)        
+    ('../../docs/documents/stackedTypePages.pdf', W, H, 8, buildStackedWords1),    ('../../docs/images/stackedTypePages.png', W, H, 8, buildStackedWords1),    ('../../docs/images/stackedTypePages.gif', W, H, 8, buildStackedWords1),    ('../../docs/images/stackedTypePagesSmall.png', 400, 600, 6, buildStackedWords1),    ('../../docs/images/stackedTypePagesSmall.gif', 400, 600, 6, buildStackedWords1),    #('../../docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    #('../../docs/images/habitCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),)        
       
 for path, w, h, numPages, m in IMAGES:
     newDrawing()
