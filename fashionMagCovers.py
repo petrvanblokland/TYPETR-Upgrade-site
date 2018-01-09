@@ -221,7 +221,7 @@ def buildCoverPages3(w, h):
     
     y -= bh+4*M
     style = dict(font='Upgrade-Medium', fontSize=100, textFill=(0xE5/255, 0xE5/255, 0xDe/255, 0.7), rTracking=-0.01)
-    bs = context.newString('RegularThin', style=style, w=w-20*M)  
+    bs = context.newString('MediumThin', style=style, w=w-20*M)  
     bx, by, bw, bh = bs.bounds()
     context.setShadow(shadow)
     context.text(bs, (w/2-(bw-bx)/2, y-bh))
@@ -245,7 +245,7 @@ def buildCoverPages4(w, h):
     M = 2 # Margin
     ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
     cw = w-ML-MR
-    L = 4*M
+    L = 6*M
     
     # Page 66
     context.newPage(w, h) 
@@ -271,7 +271,7 @@ def buildCoverPages4(w, h):
     context.text(bs, (w-bw-10*M, y-bh))
     context.resetShadow()
 
-    y -= bh+L+L
+    y -= bh+L
 
     monthStyle = dict(font='Upgrade-Book', fontSize=16, textFill=0, rTracking=0.02)
     bs = context.newString(u'December 2017', style=monthStyle, w=w/3-26*M)
@@ -288,7 +288,7 @@ def buildCoverPages4(w, h):
     context.text(bs, (w-10*M-(bh-bx), y+5*M))
 
 
-    y = h/2.1
+    y = h/2-L
     style = dict(font='Upgrade-Thin', fontSize=100, textFill=1)
     bs = context.newString('THE MATH ISSUE', style=style, w=w-10*M)  
     bx, by, bw, bh = bs.bounds()
