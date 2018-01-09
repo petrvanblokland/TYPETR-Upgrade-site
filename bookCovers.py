@@ -102,7 +102,7 @@ def buildCoverPages1(w, h, year):
     
 
 IMAGES = (
-    ('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/habitCoverPages.png', W*3/4, H*3/4, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),)        
+    ('docs/documents/bookCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/bookCoverPages.png', W*3/4, H*3/4, now().year, buildCoverPages),    ('docs/documents/bookCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/bookCoverPages1.png', W*3/4, H*3/4, now().year+1, buildCoverPages1),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()

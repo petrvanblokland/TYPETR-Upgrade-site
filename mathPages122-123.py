@@ -32,10 +32,10 @@ pageTitleStyle = dict(font='Upgrade-BookItalic', fontSize=7, rLeading=1.3, track
 
 footNoteRef = 12
 
-bookTitle = 'Meetkunder met vectoren'
+bookTitle = 'Meetkunde met vectoren'
 chapterTitle = 'Inproduct, vergelijken van figuren'
 t = [
-    (u'Voor de plaatsvector ', bodyStyle),
+    (u'Voor de plaatsvector...\n ', bodyStyle),
     (u"""Planning""", h2Style),
     (u"""By definition designers are bad planners. It seems to be fundamental to design. Too optimistic in the beginning – “There is still plenty of time”, a design is never finished – “The next one will always be better”.
 However, the fact that most designs are supposed to meet external requirements, the final deadline may have a much larger impact on the quality of the result, than the personal opinion of the designer. How do you make this apparent conflict work to your advantage?
@@ -103,7 +103,9 @@ def buildDesignPages(w, h):
 
 
 IMAGES = (
-    ('docs/documents/designPages.pdf', W, H, buildDesignPages),    ('docs/images/designPages.png', W, H, buildDesignPages),)        
+    ('docs/documents/mathPages.pdf', W, H, buildDesignPages),
+    ('docs/images/mathPages.png', W, H, buildDesignPages),
+)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
