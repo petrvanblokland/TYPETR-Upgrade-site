@@ -24,7 +24,7 @@ shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
 W, H = A4[0]*3/4, A4[1]*3/4
 
-def buildCoverPages(w, h, year):
+def buildCoverPages1(w, h, year):
 	
     magazineTitle = 'Habit'
 
@@ -62,7 +62,7 @@ def buildCoverPages(w, h, year):
     tw, th = bs.size()  
     context.text(bs, (w*3/5, MB+4*M))
     
-def buildCoverPages1(w, h, year):
+def buildCoverPages2(w, h, year):
 	
     footNoteRef = 12
 
@@ -105,7 +105,7 @@ def buildCoverPages1(w, h, year):
     
 
 IMAGES = (
-    ('docs/documents/habitCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/habitCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/habitCoverPages1.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W, H, now().year+1, buildCoverPages1),)        
+    ('docs/documents/habitCoverPages1.pdf', W, H, now().year, buildCoverPages1),    ('docs/images/habitCoverPages1.png', W, H, now().year, buildCoverPages1),    ('docs/documents/habitCoverPages2.pdf', W, H, now().year+1, buildCoverPages2),    ('docs/images/habitCoverPages2.png', W, H, now().year+1, buildCoverPages2),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
