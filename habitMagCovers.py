@@ -57,8 +57,8 @@ def buildCoverPages1(w, h, year):
     context.text(bs, (ML*8, y - bh))
  
      # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=1, textStrokeWidth=2, textFill=None)
-    bs = context.newString(year, style=style, w=w/2-24*M)  
+    yearStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=1, textStrokeWidth=2, textFill=None)
+    bs = context.newString(year, style=yearStyle, w=w/2.5-12*M)  
     tw, th = bs.size()  
     context.text(bs, (w*3/5, MB+4*M))
     
@@ -89,10 +89,9 @@ def buildCoverPages2(w, h, year):
     context.text(bs, (w*2/3, y-bh))
 
    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
-    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-12*M)  
-    tw, th = bs.size()  
-    context.text(bs, (M*3, MB+10))
+    yearStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
+    bs = context.newString(year, style=yearStyle, w=w/2.5-12*M)  
+    context.text(bs, (M*3, MB+4*M))
     
 
 IMAGES = (
