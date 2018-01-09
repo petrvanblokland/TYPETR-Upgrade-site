@@ -227,7 +227,7 @@ def buildCoverPages3(w, h):
     context.text(bs, (w/2-(bw-bx)/2, y-bh))
     context.resetShadow()
     
-    y -= bh-by+5*M
+    y -= bh-by+3*M
     style = dict(font='Upgrade-Semibold', fontSize=100, textFill=(1, 1, 1, 0.95), rTracking=0.2)
     bs = context.newString(u'HOW TO LICENSE THE TYPE FROM TYPETR•COM', style=style, w=w-12*M)  
     bx, by, bw, bh = bs.bounds()
