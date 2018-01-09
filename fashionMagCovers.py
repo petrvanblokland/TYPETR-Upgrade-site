@@ -179,7 +179,7 @@ def buildCoverPages3(w, h):
     context.text(bs, (-bx+8*M, y-bh-6*M))
     context.resetShadow()
 
-    y -= bh+L+14*M
+    y -= (bh-by)+L+6*M
 
     style = dict(font='Upgrade-Thin', fontSize=100, textFill=1)
     bs = context.newString('UPGRADE', style=style, w=w/2.2)  
@@ -345,7 +345,7 @@ def buildCoverPages4(w, h):
     context.resetShadow()
     
 IMAGES = (
-    ('docs/documents/fashionCoverPages1.pdf', W, H, buildCoverPages1),    ('docs/images/fashionCoverPages1.png', W, H, buildCoverPages1),    #('docs/documents/fashionCoverPages2.pdf', W, H, buildCoverPages2),    #('docs/images/fashionCoverPages2.png', W, H, buildCoverPages2),    ('docs/documents/fashionCoverPages3.pdf', W, H, buildCoverPages3),    ('docs/images/fashionCoverPages3.png', W, H, buildCoverPages3),    #('docs/documents/fashionCoverPages4.pdf', W, H, buildCoverPages4),    #('docs/images/fashionCoverPages4.png', W, H, buildCoverPages4),)        
+    ('docs/documents/fashionCoverPages1.pdf', W, H, buildCoverPages1),    ('docs/images/fashionCoverPages1.png', W, H, buildCoverPages1),    #('docs/documents/fashionCoverPages2.pdf', W, H, buildCoverPages2),    #('docs/images/fashionCoverPages2.png', W, H, buildCoverPages2),    ('docs/documents/fashionCoverPages3.pdf', W, H, buildCoverPages3),    ('docs/images/fashionCoverPages3.png', W, H, buildCoverPages3),    ('docs/documents/fashionCoverPages4.pdf', W, H, buildCoverPages4),    ('docs/images/fashionCoverPages4.png', W, H, buildCoverPages4),)        
       
 for path, w, h, m in IMAGES:
     newDrawing()
