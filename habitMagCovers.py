@@ -28,9 +28,10 @@ def buildCoverPages(w, h, year):
 	
     magazineTitle = 'Habit'
 
-    M = 2 # Margin
-    ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
-    cw = w-ML-MR
+    M = 4 # Margin
+    LM = 3*M # Line margin
+    ML, MR, MT, MB = M, 2*M, 3*M, 1.5*M
+    cw = w - ML - MR
     
     # Page 66
     context.newPage(w, h) 
@@ -38,28 +39,28 @@ def buildCoverPages(w, h, year):
     # Draw image, covering all page, scaled. Disproportional scale.
     context.image('docs/images/IMG_0672-50.jpg', (-150, -5), w=w*1.07, h=h*1.05)
     
-    y = h
+    y = h - MT
     
     # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=1)
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
-    tw, th = bs.size()  
+    bs = context.newString(magazineTitle, style=coverTitleStyle, w=cw)  
+    bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
     context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.65))
+    context.text(bs, (ML, y-bh))
     context.resetShadow()
 
-    y -= th
+    y = y - bh + by - LM
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Light', fontSize=100, textFill=0.1)
     bs = context.newString('Upgrade loveables', style=style, w=w*0.75-18*M)  
-    tw, th = bs.size()  
-    context.text(bs, (ML*14, y+th*0.65))
+    bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
+    context.text(bs, (ML*8, y - bh))
  
      # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=1, textStrokeWidth=2, textFill=None)
     bs = context.newString(year, style=style, w=w/2-24*M)  
     tw, th = bs.size()  
-    context.text(bs, (w/2, MB+20))
+    context.text(bs, (w*3/5, MB+4*M))
     
 def buildCoverPages1(w, h, year):
 	
@@ -67,9 +68,10 @@ def buildCoverPages1(w, h, year):
 
     magazineTitle = u'Habit'
 
-    M = 2 # Margin
-    ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
-    cw = w-ML-MR
+    M = 4 # Margin
+    LM = 3*M # Line margin
+    ML, MR, MT, MB = M, 2*M, 3*M, 1.5*M
+    cw = w - ML - MR
     
     # Page 66
     context.newPage(w, h) 
@@ -77,24 +79,27 @@ def buildCoverPages1(w, h, year):
     # Draw image, covering all page, scaled.
     context.image('docs/images/IMG_3076-50.jpg', (-14, -145), h=h*1.05)
     
-    y = h
+    y = h - MT
     
     # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95))
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-4*M)  
-    tw, th = bs.size()  
-    context.text(bs, (ML, y-th*0.55))
+    bs = context.newString(magazineTitle, style=coverTitleStyle, w=cw)  
+    bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
+    context.setShadow(shadow)
+    context.text(bs, (ML, y-bh))
+    context.resetShadow()
 
-    y -= th
+    y = y - bh + by - LM
+
     # Title of cover, make it fit in with and add shadow
     style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rLeading=1)
     bs = context.newString('Upgrade\nServices', style=style, w=w/4)  
-    tw, th = bs.size()  
-    context.text(bs, (w*2/3, y+th*1.2))
+    bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
+    context.text(bs, (w*2/3, y-bh))
 
    # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
-    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-24*M)  
+    bs = context.newString(year, style=coverTitleStyle, w=w/2.5-12*M)  
     tw, th = bs.size()  
     context.text(bs, (M*3, MB+20))
     
