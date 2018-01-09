@@ -221,7 +221,7 @@ def buildCoverPages3(w, h):
     
     y -= bh+4*M
     style = dict(font='Upgrade-Medium', fontSize=100, textFill=(0xE5/255, 0xE5/255, 0xDe/255, 0.7), rTracking=-0.01)
-    bs = context.newString('MediumThin', style=style, w=w-20*M)  
+    bs = context.newString('MediumLight', style=style, w=w-20*M)  
     bx, by, bw, bh = bs.bounds()
     context.setShadow(shadow)
     context.text(bs, (w/2-(bw-bx)/2, y-bh))
@@ -274,7 +274,7 @@ def buildCoverPages4(w, h):
     y -= bh+L
 
     monthStyle = dict(font='Upgrade-Book', fontSize=16, textFill=0, rTracking=0.02)
-    bs = context.newString(u'December 2017', style=monthStyle, w=w/3-26*M)
+    bs = context.newString(u'December %d' % now().year, style=monthStyle, w=w/3-26*M)
     bx, by, bw, bh = bs.bounds()
     context.text(bs, (w-(bw-bx)-10*M, y-bh))
 
@@ -285,7 +285,7 @@ def buildCoverPages4(w, h):
     bs = context.newString(u'$4', style=priceStyle1)
     bs +=  context.newString('99',style=priceStyle2)
     bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-10*M-(bh-bx), y+5*M))
+    context.text(bs, (w-10*M-(bw-bx), y+5*M))
 
 
     y = h/2-L
