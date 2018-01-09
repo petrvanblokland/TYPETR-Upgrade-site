@@ -169,17 +169,17 @@ def buildCoverPages3(w, h):
     bs +=  context.newString('95',style=priceStyle2)
     tw, th = bs.size()
     bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-5*M-tw, y-bh-7*M))
+    context.text(bs, (w-3*M-tw, y-bh-7*M))
 
     # Title of cover, make it fit in with and add shadow
     coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
     bs = context.newString(u'U', style=coverTitleStyle, w=w/2)  
     bx, by, bw, bh = bs.bounds()
     context.setShadow(shadow)
-    context.text(bs, (-bx+8*M, y-bh-7*M))
+    context.text(bs, (-bx+8*M, y-bh-6*M))
     context.resetShadow()
 
-    y -= bh+L+7*M
+    y -= bh+L+9*M
 
     style = dict(font='Upgrade-Thin', fontSize=100, textFill=1)
     bs = context.newString('UPGRADE', style=style, w=w/2.2)  
@@ -198,7 +198,7 @@ def buildCoverPages3(w, h):
     context.resetShadow()
 
     
-    y -= bh+2*M
+    y -= bh+4*M
     
     style = dict(font='Upgrade-Light', fontSize=30, textFill=1, xTextAlign=CENTER, rLeading=0.95)
     style_sc = dict(font='Upgrade-Light', fontSize=30, textFill=1, xTextAlign=CENTER, rLeading=0.95, rTracking=0.2, openTypeFeatures=dict(smcp=True))
@@ -219,7 +219,7 @@ def buildCoverPages3(w, h):
     context.text(bs, (w/2-(bw-bx)/2, y-bh))
     context.resetShadow()
     
-    y -= bh+4*M
+    y -= bh+6*M
     style = dict(font='Upgrade-Medium', fontSize=100, textFill=(0xE5/255, 0xE5/255, 0xDe/255, 0.7), rTracking=-0.01)
     bs = context.newString('MediumLight', style=style, w=w-20*M)  
     bx, by, bw, bh = bs.bounds()
