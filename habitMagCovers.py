@@ -22,17 +22,17 @@ from pagebot.toolbox.dating import now
 
 shadow = Shadow(offset=(6, -6), blur=10, color=(0.2, 0.2, 0.2, 0.5))
 
+magazineTitle = u'Habit'
+
 W, H = A4[0]*3/4, A4[1]*3/4
+
+M = 4 # Margin
+LM = 4*M # Line margin
+ML, MR, MT, MB = M, 2*M, 3*M, 1.5*M
+cw = W - ML - MR
 
 def buildCoverPages1(w, h, year):
 	
-    magazineTitle = 'Habit'
-
-    M = 4 # Margin
-    LM = 3*M # Line margin
-    ML, MR, MT, MB = M, 2*M, 3*M, 1.5*M
-    cw = w - ML - MR
-    
     # Page 66
     context.newPage(w, h) 
     
@@ -64,15 +64,6 @@ def buildCoverPages1(w, h, year):
     
 def buildCoverPages2(w, h, year):
 	
-    footNoteRef = 12
-
-    magazineTitle = u'Habit'
-
-    M = 4 # Margin
-    LM = 3*M # Line margin
-    ML, MR, MT, MB = M, 2*M, 3*M, 1.5*M
-    cw = w - ML - MR
-    
     # Page 66
     context.newPage(w, h) 
     
@@ -101,7 +92,7 @@ def buildCoverPages2(w, h, year):
     coverTitleStyle = dict(font='Upgrade-BlackItalic', fontSize=100, textStroke=(1, 1, 1, 0.6), textStrokeWidth=2.5, textFill=None)
     bs = context.newString(year, style=coverTitleStyle, w=w/2.5-12*M)  
     tw, th = bs.size()  
-    context.text(bs, (M*3, MB+20))
+    context.text(bs, (M*3, MB+10))
     
 
 IMAGES = (

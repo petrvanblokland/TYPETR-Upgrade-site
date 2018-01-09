@@ -28,8 +28,8 @@ magazineTitle1 = u'Travel'
 
 def buildCoverPages(w, h, year):
 	
-    bodyStyle = dict(font='Upgrade-Light', fontSize=26, textFill=1, rTracking=0.03)
-    bodyItalicStyle = dict(font='Upgrade-LightItalic', fontSize=26, textFill=1, rTracking=0.03)
+    bodyStyle = dict(font='Upgrade-Book', fontSize=26, textFill=1, rTracking=0.03)
+    bodyItalicStyle = dict(font='Upgrade-BookItalic', fontSize=26, textFill=1, rTracking=0.03)
 
     magazineTitle2 = u'OSAKA'
 
@@ -89,7 +89,8 @@ def buildCoverPages(w, h, year):
     tw, th = context.textSize(bs, w=w-M*20)
     # Draw textBox background color and frame.
     context.save()
-    context.fill((0, 0.3, 0, 0.7))
+    r, g, b = 0x80/255, 0x40/255, 0x0A/255
+    context.fill((r, g, b, 0.7))
     context.rect(0, 0, w, th+20*M)
     context.restore()
       
@@ -115,7 +116,7 @@ def buildCoverPages1(w, h, year):
         (u'Oak Bluffs', bodyItalicStyle),
         (u' has Carpenter Gothic cottages and an iconic carousel.', bodyStyle)
     )
-	 
+    
     r, g, b = 0x18/255, 0x24/255, 0x35/255
 
     M = 2 # Margin
@@ -159,7 +160,7 @@ def buildCoverPages1(w, h, year):
 
    
 IMAGES = (
-    ('docs/documents/travelCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/travelCoverPages.png', W, H, now().year, buildCoverPages),    ('docs/documents/travelCoverPages1x.pdf', W, H, now().year+1, buildCoverPages1),    ('docs/images/travelCoverPages1x.png', W, H, now().year+1, buildCoverPages1),)        
+    ('docs/documents/travelCoverPages.pdf', W, H, now().year, buildCoverPages),    ('docs/images/travelCoverPages.png', W, H, now().year, buildCoverPages),    #('docs/documents/travelCoverPages1x.pdf', W, H, now().year+1, buildCoverPages1),    #('docs/images/travelCoverPages1x.png', W, H, now().year+1, buildCoverPages1),)        
       
 for path, w, h, year, m in IMAGES:
     newDrawing()
