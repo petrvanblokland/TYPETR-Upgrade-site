@@ -401,7 +401,12 @@ def slide06(w, h):
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h/2+50))
-        
+
+def italicName(fontName):
+    if fontName == 'Upgrade-Regular':
+        return 'Upgrade-Italic'
+    return fontName + 'Italic'
+           
 def weights(w, h):
     M = 40
     TRACKING = 0.4
@@ -416,47 +421,47 @@ def weights(w, h):
     for fontName in UpgradeWeights:
         fs += FormattedString('ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
+        fs += FormattedString('ø', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('Ø', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('Ø', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
+        fs += FormattedString('Ø', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('$', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('$', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
+        fs += FormattedString('$', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('¢', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('¢', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
+        fs += FormattedString('¢', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True), align=CENTER, tracking=TRACKING)
+        fs += FormattedString('0', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=True), align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('0', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('0', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+        fs += FormattedString('0', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('A', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('A', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+        fs += FormattedString('A', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('a', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('a', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+        fs += FormattedString('a', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     fs += FormattedString('\n', font=fontName, fontSize=fSize, lineHeight=leading)
     for fontName in UpgradeWeights:
         fs += FormattedString('&', font=fontName, fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     for fontName in UpgradeWeights2:
-        fs += FormattedString('&', font=fontName+'Italic', fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
+        fs += FormattedString('&', font=italicName(fontName), fill=1, fontSize=fSize, lineHeight=leading, openTypeFeatures=dict(zero=False), align=CENTER, tracking=TRACKING)
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, h-M))
      
