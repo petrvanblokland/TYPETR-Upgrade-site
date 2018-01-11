@@ -86,25 +86,28 @@
 													<ul class="style1 posts">
 														<li>
 															<h3>Weight (wght)</h3>
-															<p>The default weight axis of Upgrade is made from 5 masters, to cover the extreme range between Upgrade Hairline and Upgrade UltraBlack.</p>
+															<p>The default weight axis of Upgrade is made from 5 masters, to cover the extreme range between Upgrade Hairline and Upgrade UltraBlack.
 															<a href="documents/stackedTypePages.pdf" target="external"><img src="images/stackedTypePages.gif" class="spreadPageLeft" width="100%"></a>
+															Click on the animation to view a similar document as PDF.</p>
+														</li>
+														<li>
 															<h3>How this animation was made</h3>
 															<p>This animated gif of 8 frames was made by <a href="scripts/stackedWords.py">this PageBot script</a>, working as follows: <br><br>
 
 															• Start a script in <em>DrawBot + PageBot</em> which takes a random selection from a list of words and then combines them in pairs. Each pair will fill a line.<br> 
 															• If the number of characters in a line is smaller than 12 characters – or otherwise with a chance of 10% – convert the line to capitals.<br>
-															• A stack of lines start on top of a page.<br>
+															• The stack of lines start on top of a page: put the cursor at the top-left corner of the margin.<br>
 															• Select a random weight from the TYPETR Upgrade family. There is a 20% chance that italics are selected.<br>
 															• Then calculate the point size needed, to make the line fit on the document page width.<br>
-															• Calculate the vertical enclosed pixel box and move the cursor position vertical to the next line.<br>
-															• Repeat this until the page is filled until.<br>
-															• Then repeat it all for a number of frames in the animation.<br>
-															• Save as PDF and as animated gif.<br>
+															• Calculate the enclosing pixel box and move the cursor position vertical to the next line, increased by some leading.<br>
+															• Repeat this until the page is filled.<br>
+															• Then repeat this page squence for the required number of frames in the animation.<br>
+															• Save as PDF and as animated gif, with frame duration of 3 seconds.<br>
 															</p>
 														</li>
 														<li>
 															<h3>Baseline-J [ss08] feature</h3>
-															<p>Special not that the capital lines are using the OT-feature [ss08], which forces Upgrade to use the inline-J instead of the standard hanging-J. This creates a closely wrapped bounding box on capital words.</p>
+															<p>Special note that the capital lines are using the OT-feature [ss08], which forces Upgrade to use the inline-J instead of the standard hanging-J. This creates a closely wrapped bounding box on capital words.</p>
 
 														</li>
 														<!--
