@@ -54,7 +54,7 @@
 												</header>
 												<p>[Explaining the workings of interpolation, multiple master axes and variable fonts. There is a number of slides of previous presentations that can be used as illustrations here.]</p>
 												<img src="images/NoordzijCube-test-x-1000MMTranspUpgrade.gif" alt="NoordzijCube-test-x-1000MMTranspUpgrade.gif" width="100%"/>
-												<p>Gerrit Noordzij’s cube it based on a merge between expansion contrast (sharp nib pencil) and translation contrast (broad nib pencil). The type of contrast used in Upgrade is based on translation, with little difference between thick and thin strokes. The animation (based on software by Just van Rossum’s <a href="http://dailydrawbot.tumblr.com" target="external">Daily Drawbot</a>) shows where the how the contrast principle of Upgrade is located in Noordzij’s cube.<br>Upgrade styles in this example are respectively: Light, Book, Regular, Semibold and Black.</p>   
+												<p>Gerrit Noordzij’s cube it based on a merge between expansion contrast (sharp nib pencil) and translation contrast (broad nib pencil). The type of contrast used in Upgrade is based on translation, with little difference between vertical thick and horizontal thin strokes. The animation (based on software by Just van Rossum’s <a href="http://dailydrawbot.tumblr.com" target="external">Daily Drawbot</a>) shows where the contrast principle of Upgrade is located in Noordzij’s cube.<br>Upgrade styles in this example are respectively: Light, Book, Regular, Semibold and Black.</p>   
 
 												<h3>Different drawings for different weights</h3>
 												<img src="images/glyphsbyweights.png" alt="glyphsbyweights.png" width="100%"/>
@@ -88,13 +88,23 @@
 															<h3>Weight (wght)</h3>
 															<p>The default weight axis of Upgrade is made from 5 masters, to cover the extreme range between Upgrade Hairline and Upgrade UltraBlack.</p>
 															<a href="documents/stackedTypePages.pdf" target="external"><img src="images/stackedTypePages.gif" class="spreadPageLeft" width="100%"></a>
-															<p>This animated <a href="scripts/stackedWords.py">PageBot script</a>, was created as follows: Start a script in DrawBot + PageBot which takes a random selection from a list of words and then combines them in  pairs. If the number of character of the line of smaller than 12 characters – or with a chance of 10% convert the line to capitals. Lines start on top of page. Select a random weight from the Upgrade family. There is a 20% chance that italics are selected. Calculate the point size to make the line fit on the document page width, calculate the vertical enclosed pixel box and move the cursor position vertical to do next line. Repeat this until the page is filled. Then repeat for a number of pages. Save as PDF and animated gif.</p>
+															<h3>How this animation was made</h3>
+															<p>This animated gif of 8 frames was made by <a href="scripts/stackedWords.py">this PageBot script</a>, working as follows: <br><br>
 
-															<p>The weight masters are used as [wght] backbone axis for the upcoming Upgrade Var.</p>
-
-															<h3>Baseline-J [ss08]</h3>
-															<p>The capitals are using the OT-feature [ss08], which forces the used of the Upgrade inline-J, to make a closely wrapped bounding box.</p>
-
+															• Start a script in <em>DrawBot + PageBot</em> which takes a random selection from a list of words and then combines them in pairs. Each pair will fill a line.<br> 
+															• If the number of characters in a line is smaller than 12 characters – or otherwise with a chance of 10% – convert the line to capitals.<br>
+															• A stack of lines start on top of a page.<br>
+															• Select a random weight from the TYPETR Upgrade family. There is a 20% chance that italics are selected.<br>
+															• Then calculate the point size needed, to make the line fit on the document page width.<br>
+															• Calculate the vertical enclosed pixel box and move the cursor position vertical to do next line.<br>
+															• Repeat this until the page is filled until.<br>
+															• Then repeat it all for a number of frames in the animation.<br>
+															• Save as PDF and as animated gif.<br>
+															</p>
+														</li>
+														<li>
+															<h3>Baseline-J [ss08] feature</h3>
+															<p>Special not that the capital lines are using the OT-feature [ss08], which forces Upgrade to use the inline-J instead of the standard hanging-J. This creates a closely wrapped bounding box on capital words.</p>
 
 														</li>
 														<!--
@@ -135,13 +145,20 @@
 													</header>
 													<ul class="style1 tweets">
 														<li>
-															<p>Do you want to learn how to use Upgrade in graphic design and typography, directly from the makers? That is possible. <a href="http://designdesign.space" target="external">Design Design Space</a> offers a flexible choice of studies and workshops, where participants can define their individual targets.</p>
+															<p>Are you looking for a study to improve your own type design skills? Or simply one to learn scripting boring production tasks? That is possible. See for instance:</p>
 														</li>
 														<li>
-															<p>Or if you want to learn how to makes Python PageBot scripts, like the ones that created the images on this Upgrade website, let us know that your are interested. Together we probably can find a a fitting strategy for such a study.</p>
+															<h3>Programming typography (Oct 1-8)</h3>
+															In this intensive online workshop of one week, you will select one of your typographic projects and then ask yourself how the design and production could have been automated using your own scripts. And how much more alternatives you could have visualized. <a href="http://designdesign.space/#programming-typography" target="External">Read more...</a></p>
+														
+															<p>Or if you have more time and want to dive deeper into the subject of typographic algorithms, you may apply for this study of 4 weeks:</p>
 														</li>
 														<li>
-															<p>More in general, <a href="http://designdesign.space" target="external">Design Design Space</a> stimulates students to study the design of their process, independent of context, domain or purpose of the designs.</p>
+															<h3>Python scripting for graphic designers (May 7 - June 4)</h3>
+															<p>A groups of graphic designers learn from scratch how to script micro and macro tasks in their design process. In a series of short specific assignments the designers learn to recognize patterns that can be automated, breaking them down into functions that can be coded. <a href="http://designdesign.space/#python-scripting-for-graphic-designers" target="External">Read more...</a></p>
+														</li>
+														<li>
+															<p>In general, <a href="http://designdesign.space" target="external">Design Design Space</a> stimulates students to study the design of their process, independent of context, domain or purpose of the designs.</p>
 														</li>
 													</ul>
 													<a href="http://designdesign.space" target="external" class="button">Learn more</a>
