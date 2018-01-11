@@ -157,7 +157,8 @@ def image4(w, h):
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, 75))
     s = '$12,340 ¥56,897 11/23'
-    fs = FormattedString(s, font='Upgrade-Book', fontSize=h/3.7, fill=0, openTypeFeatures=dict(smcp=True, onum=False, frac=True, zero=True))
+    print listOpenTypeFeatures('Upgrade-Book')
+    fs = FormattedString(s, font='Upgrade-Book', fontSize=h/3.7, fill=0, openTypeFeatures=dict(c2sc=True, onum=False, frac=True, zero=True))
     tw, th = textSize(fs)
     text(fs, (w/2-tw/2, 20))
         
