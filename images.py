@@ -328,15 +328,18 @@ def image16(w, h):
     text(fs, (w/2-tw/2, h/2-th/2))
   
 def randomBackgroundColor():
-    return 0.3+0.2*random(),0.1+0.1*random(),0.4+0.1*random()
+    #return 0.3+0.2*random(),0.1+0.1*random(),0.4+0.1*random()
+    return 0.9+0.2*random(),0.8+0.2*random(),0.8+0.2*random()
   
 def slide01(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1, openTypeFeatures=dict(smcp=False, onum=False, ss09=False, frac=False, zero=False))
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -344,11 +347,13 @@ def slide01(w, h):
         
 def slide02(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
-    fontName = choice(upgradeFonts)
+    fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
     fs = FormattedString(fontNameLabel, font=fontName, fontSize=h/3, fill=tc)
     tw, th = textSize(fs)
@@ -356,9 +361,11 @@ def slide02(w, h):
         
 def slide03(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
@@ -368,9 +375,11 @@ def slide03(w, h):
         
 def slide04(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
@@ -380,9 +389,11 @@ def slide04(w, h):
         
 def slide05(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
@@ -392,9 +403,11 @@ def slide05(w, h):
         
 def slide06(w, h):
     newPage(w, h)
+    fill(0.1)
+    rect(0, 0, w, h)
     tc = randomBackgroundColor()
     for n in range(200):
-        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.3+0.7)
+        fs = FormattedString(choice(WORDS), font=choice(upgradeFonts), fontSize=h/3, fill=random()*0.2+0.1)
         text(fs, (-w/2+random()*w*2, -h/2+random()*h*2))
     fontName = choice(UpgradeMiddleWeights)
     fontNameLabel = fontName.replace('-', ' ').replace('Italic', '')
