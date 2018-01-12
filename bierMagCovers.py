@@ -58,7 +58,7 @@ def buildCoverPages1(w, h, imagePath, page):
     context.text(bs, (w-M-(bx+bw), MB))
 
     y = h - M
-    
+    print listOpenTypeFeatures('Upgrade-Light')
     c = ( # Title colors per page
         0, 1, 0, 1   
     )

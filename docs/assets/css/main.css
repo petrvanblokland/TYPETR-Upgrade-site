@@ -74,6 +74,21 @@
 		border-right: solid 0.5px #808080;
 		border-bottom: solid 0.5px #808080;
 	}
+
+	sup {
+		-moz-font-feature-settings:"sups=1";
+		-moz-font-feature-settings:"sups";
+		-ms-font-feature-settings:"sups";
+		-webkit-font-feature-settings:"sups";
+		font-feature-settings:"supsn";
+	}
+	sub {
+		-moz-font-feature-settings:"sinf=1";
+		-moz-font-feature-settings:"sinf";
+		-ms-font-feature-settings:"sinf";
+		-webkit-font-feature-settings:"sinf";
+		font-feature-settings:"sinf";
+	}
 /* Box Model */
 
 	*, *:before, *:after {
