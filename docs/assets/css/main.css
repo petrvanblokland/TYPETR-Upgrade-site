@@ -89,6 +89,20 @@
 		-webkit-font-feature-settings:"sinf";
 		font-feature-settings:"sinf";
 	}
+	span.smcp {
+		-moz-font-feature-settings:"smcp=1";
+		-moz-font-feature-settings:"smcp";
+		-ms-font-feature-settings:"smcp";
+		-webkit-font-feature-settings:"smcp";
+		font-feature-settings:"smcp";
+	}
+	span.c2sc {
+		-moz-font-feature-settings:"c2sc=1";
+		-moz-font-feature-settings:"c2sc";
+		-ms-font-feature-settings:"c2sc";
+		-webkit-font-feature-settings:"c2sc";
+		font-feature-settings:"c2sc";
+	}
 /* Box Model */
 
 	*, *:before, *:after {
