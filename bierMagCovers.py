@@ -27,7 +27,7 @@ W, H = A4[0]*3/4, A4[1]*3/4
 TYPETR_COLOR = [0x1D/255, 0x42/255, 0x9A/255]
 
 
-def buildCoverPages1(w, h, imagePath):
+def buildCoverPages1(w, h, imagePath, page):
 	
     magazineTitle = 'Bier!'
 
@@ -93,256 +93,25 @@ def buildCoverPages1(w, h, imagePath):
 
     y -= (bh-by)-LM
 
+    t = (
+        u'Kompaan brouwt het beste bier van Nederland',  
+        u'Wederopbouw: Help de monniken met “Deep Roots”',  
+        u'Two Chefs Brewing opent microbrouwerij van Amsterdam',  
+        u'Brouwerij em distilleerderij in Weesper kerk',  
+    )
     style = dict(font='Upgrade-Regular', fontSize=100, textFill=(1, 1, 1, 0.95), rTracking=0.02)
-    bs = context.newString('Kompaan brouwt het beste bier van Nederland', style=style, w=w-2*M)  
+    bs = context.newString(t[page], style=style, w=w-2*M)  
     bx, by, bw, bh = bs.bounds()
     context.setShadow(shadow)
     context.text(bs, (M, 6*M))
     context.resetShadow()
     
-
-def buildCoverPages2(w, h):
-	
-    footNoteRef = 12
-
-    magazineTitle = 'Magazin'
-    chapterTitle = 'Design Design Space'
-
-    M = 2 # Margin
-    ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
-    cw = w-ML-MR
-    
-    # Page 66
-    context.newPage(w, h) 
-    
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1978-50.jpg', (-w/2, 0), h=h)
-    
-    y = h
-    
-    # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-SemiboldItalic', fontSize=100, textFill=1)
-    bs = context.newString(now().fullmonthname, style=style, w=w/4)  
-    tw, th = bs.size()  
-    context.setShadow(shadow)
-    context.text(bs, (w/2+tw/10, y-th*0.9))
-    context.resetShadow()
-
-    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
-    bs = context.newString(magazineTitle, style=coverTitleStyle, w=w-2*M)  
-    tw, th = bs.size()  
-    context.setShadow(shadow)
-    context.text(bs, (ML, y-th*0.7))
-    context.resetShadow()
-
-def buildCoverPages3(w, h):
-	    
-    M = 2 # Margin
-    ML, MR, MT, MB = 2*M, 2*M, 2*M, 1.5*M
-    cw = w - ML - MR
-    L = 12
-    
-    # Page 66
-    context.newPage(w, h) 
-    
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1382-50.jpg', (-w/3, 0), h=h)
-
-    y = h - MT
-    
-    monthStyle = dict(font='Upgrade-Regular', fontSize=15, textFill=(1, 1, 1, 0.95), rTracking=0.05)
-    bs = context.newString(u'%s %d' % (now().fullmonthname, now().year), style=monthStyle)
-    bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-7*M-bw, 8*M))
-
-    priceStyle1 = dict(font='Upgrade-Light', fontSize=15, textFill=0, rTracking=0.02)
-    priceStyle2 = dict(font='Upgrade-Light', textFill=0, fontSize=15, openTypeFeatures=dict(sups=True))
-    bs = context.newString(u'$4', style=priceStyle1)
-    bs +=  context.newString('95',style=priceStyle2)
-    tw, th = bs.size()
-    bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-3*M-tw, y-bh-7*M))
-
-    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-UltraBlack', fontSize=100, textFill=1)
-    bs = context.newString(u'U', style=coverTitleStyle, w=w/2)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (-bx+8*M, y-bh-6*M))
-    context.resetShadow()
-
-    y -= (bh-by)+L+6*M
-
-    style = dict(font='Upgrade-Thin', fontSize=100, textFill=1)
-    bs = context.newString('UPGRADE', style=style, w=w/2.2)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w/4-(bw-bx)/2, y-bh))
-    context.resetShadow()
-
-    y -= bh+4*M
-
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1)
-    bs = context.newString('STYLES', style=style, w=w/2.1)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w/4-(bw-bx)/2, y-bh))
-    context.resetShadow()
-
-    
-    y -= bh+4*M
-    
-    style = dict(font='Upgrade-Light', fontSize=30, textFill=1, xTextAlign=CENTER, rLeading=0.95)
-    style_sc = dict(font='Upgrade-Light', fontSize=30, textFill=1, xTextAlign=CENTER, rLeading=0.95, rTracking=0.2, openTypeFeatures=dict(smcp=True))
-    bs = context.newString('Magazine\nTypography\n', style=style)  
-    bs += context.newString('Sketching\n', style=style_sc)  
-    bs += context.newString('Code Designers', style=style)  
-    bx, by, bw, bh = bs.bounds()
-    tw, th = bs.size()
-    context.setShadow(shadow)
-    context.text(bs, (w/4-(bw-bx)/2, y-bh))
-    context.resetShadow()
-    
-    y -= th+4+M
-    style = dict(font='Upgrade-Black', fontSize=40, textFill=(1, 0.5, 0.7, 0.8), rTracking=0.01)
-    bs = context.newString(u'PAGEBOT PAGINA’S', style=style)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w/2-(bw-bx)/2, y-bh))
-    context.resetShadow()
-    
-    y -= bh+6*M
-    style = dict(font='Upgrade-Medium', fontSize=100, textFill=(0xE5/255, 0xE5/255, 0xDe/255, 0.7), rTracking=-0.01)
-    bs = context.newString('MediumLight', style=style, w=w-20*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w/2-(bw-bx)/2, y-bh))
-    context.resetShadow()
-    
-    y -= bh-by+3*M
-    style = dict(font='Upgrade-Semibold', fontSize=100, textFill=(1, 1, 1, 0.95), rTracking=0.2)
-    bs = context.newString(u'HOW TO LICENSE THE TYPE FROM TYPETR•COM', style=style, w=w-12*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w/2-(bw-bx)/2, y-bh))
-    context.resetShadow()
-        
-def buildCoverPages4(w, h):
-	
-    footNoteRef = 12
-
-    magazineTitle = 'Magazin'
-    chapterTitle = 'Design Design Space'
-
-    M = 2 # Margin
-    ML, MR, MT, MB = M, 0.75*M, M, 1.5*M
-    cw = w-ML-MR
-    L = 6*M
-    
-    # Page 66
-    context.newPage(w, h) 
-    
-    # Draw image, covering all page, scaled.
-    context.image('docs/images/IMG_1645-50.jpg', (-w/1.5, 0), h=h)
-    
-    y = h-10*M
-    """
-    # Title of cover, make it fit in with and add shadow
-    style = dict(font='Upgrade-SemiboldItalic', fontSize=100, textFill=1)
-    bs = context.newString(now().fullmonthname, style=style, w=w/4)  
-    tw, th = bs.size()  
-    context.setShadow(shadow)
-    context.text(bs, (w/2+tw/10, y-th*0.9))
-    context.resetShadow()
-    """
-    # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Medium', fontSize=100, textFill=1)
-    bs = context.newString('M', style=coverTitleStyle, w=w/2)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (w-bw-10*M, y-bh))
-    context.resetShadow()
-
-    y -= bh+L
-
-    monthStyle = dict(font='Upgrade-Book', fontSize=16, textFill=0, rTracking=0.02)
-    bs = context.newString(u'December %d' % now().year, style=monthStyle, w=w/3-26*M)
-    bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-(bw-bx)-10*M, y-bh))
-
-    y = h/2
-
-    priceStyle1 = dict(font='Upgrade-Book', fontSize=20, textFill=0.7, rTracking=0.02)
-    priceStyle2 = dict(font='Upgrade-Book', textFill=0.7, fontSize=20, openTypeFeatures=dict(sups=True))
-    bs = context.newString(u'$4', style=priceStyle1)
-    bs +=  context.newString('99',style=priceStyle2)
-    bx, by, bw, bh = bs.bounds()
-    context.text(bs, (w-10*M-(bw-bx), y+5*M))
-
-
-    y = h/2-L
-    style = dict(font='Upgrade-Thin', fontSize=100, textFill=1)
-    bs = context.newString('THE MATH ISSUE', style=style, w=w-10*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*5, y-bh))
-    context.resetShadow()
-
-    y -= bh+L
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1)
-    bs = context.newString('FESTIVAL STYLES', style=style, w=w-10*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*5, y-bh))
-    context.resetShadow()
-    
-    y -= bh+L
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=0.2)
-    bs = context.newString('UPGRADED MAGAZINE TYPOGRAPHY', style=style, w=w-10*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*6, y-bh))
-    context.resetShadow()
-    
-    y -= bh+L
-    style = dict(font='Upgrade-Light', fontSize=100, textFill=1, rTracking=0.1)
-    bs = context.newString('PAGEBOT FASHION', style=style, w=w-9*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*5, y-bh))
-    context.resetShadow()
-    
-    y -= bh+L
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=0.02)
-    bs = context.newString('HEAD & BODY CURVES', style=style, w=w-9*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*5, y-bh))
-    context.resetShadow()
-    
-    y -= bh+L
-    style = dict(font='Upgrade-ExtraLight', fontSize=100, textFill=1, rTracking=0.02)
-    bs = context.newString('LOVE LETTERS', style=style, w=w-8*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*4, y-bh))
-    context.resetShadow()
-    
-    y -= bh+L
-    style = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=0.2)
-    bs = context.newString('HOW TO BUY TYPE FROM TYPENETWORK/TYPETR', style=style, w=w-12*M)  
-    bx, by, bw, bh = bs.bounds()
-    context.setShadow(shadow)
-    context.text(bs, (ML*7, y-bh))
-    context.resetShadow()
-   
 IMAGES = (
-    ('docs/documents/bierCoverPages1.pdf', W, H, buildCoverPages1, 'IMG_2034-50.jpg'),    ('docs/images/bierCoverPages1.png', W, H, buildCoverPages1, 'IMG_2034-50.jpg'),    #('docs/documents/bierCoverPages2.pdf', W, H, buildCoverPages1, 'IMG_3397-50.jpg'),    #('docs/images/bierCoverPages2.png', W, H, buildCoverPages1, 'IMG_3397-50.jpg'),    ('docs/documents/bierCoverPages2.pdf', W, H, buildCoverPages1, 'IMG_4890-50.jpg'),    ('docs/images/bierCoverPages2.png', W, H, buildCoverPages1, 'IMG_4890-50.jpg'),    ('docs/documents/bierCoverPages3.pdf', W, H, buildCoverPages1, 'IMG_9037-50.jpg'),    ('docs/images/bierCoverPages3.png', W, H, buildCoverPages1, 'IMG_9037-50.jpg'),    ('docs/documents/bierCoverPages4.pdf', W, H, buildCoverPages1, 'IMG_9070-50.jpg'),    ('docs/images/bierCoverPages4.png', W, H, buildCoverPages1, 'IMG_9070-50.jpg'),)        
+    ('docs/documents/bierCoverPages1.pdf', W, H, buildCoverPages1, 'IMG_2034-50.jpg', 0),    ('docs/images/bierCoverPages1.png', W, H, buildCoverPages1, 'IMG_2034-50.jpg', 0),    ('docs/documents/bierCoverPages2.pdf', W, H, buildCoverPages1, 'IMG_4890-50.jpg', 1),    ('docs/images/bierCoverPages2.png', W, H, buildCoverPages1, 'IMG_4890-50.jpg', 1),    ('docs/documents/bierCoverPages3.pdf', W, H, buildCoverPages1, 'IMG_9037-50.jpg', 2),    ('docs/images/bierCoverPages3.png', W, H, buildCoverPages1, 'IMG_9037-50.jpg', 2),    ('docs/documents/bierCoverPages4.pdf', W, H, buildCoverPages1, 'IMG_9070-50.jpg', 3),    ('docs/images/bierCoverPages4.png', W, H, buildCoverPages1, 'IMG_9070-50.jpg', 3),)        
       
-for path, w, h, m, imagePath in IMAGES:
+for path, w, h, m, imagePath, page in IMAGES:
     newDrawing()
-    m(w, h, imagePath)
+    m(w, h, imagePath, page)
     saveImage(path, multipage=True)
     print path
     
