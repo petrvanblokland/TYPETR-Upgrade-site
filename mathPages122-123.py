@@ -37,11 +37,11 @@ chapterTitle = 'Inproduct, vergelijken van figuren'
 t = [
     (u'Voor de plaatsvector...\n ', bodyStyle),
     (u"""Planning""", h2Style),
-    (u"""By definition designers are bad planners. It seems to be fundamental to design. Too optimistic in the beginning – “There is still plenty of time”, a design is never finished – “The next one will always be better”.
+    (u"""By definition, designers are bad planners. It seems to be fundamental to design. Too optimistic in the beginning – “There is still plenty of time”, a design is never finished – “The next one will always be better”.
 However, the fact that most designs are supposed to meet external requirements, the final deadline may have a much larger impact on the quality of the result, than the personal opinion of the designer. How do you make this apparent conflict work to your advantage?
 """, bodyStyle),
     (u"""How much time do you need?""", h2Style),
-    (u"""The core idea behind designing the design process, is that it doesn’t make a difference for how long you do it. A project of 1 hour, basically goes through the same stages (research – design – presentation) as a project of 1 year. Of course, it does matters how long you study something, for the level of details that can be addressed. But if you only have a day or a week for an assignment, then that is part of the requirements.""", bodyStyle),
+    (u"""The core idea behind designing the design process, is that it doesn’t make a difference for how long you do it. A project of 1 hour basically goes through the same stages (research – design – presentation) as a project of 1 year. Of course, it does matters how long you study something, for the level of details that can be addressed. But if you only have a day or a week for an assignment, then that is a part of the requirements.""", bodyStyle),
     (context.newString(footNoteRef, style=footNoteRefTextStyle), None),
     (u""" The result can still be better than anything your customer would have done.
 How would you design such a design process better next time?

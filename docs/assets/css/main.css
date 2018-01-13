@@ -103,6 +103,20 @@
 		-webkit-font-feature-settings:"c2sc";
 		font-feature-settings:"c2sc";
 	}
+	span.case {
+		-moz-font-feature-settings:"case=1";
+		-moz-font-feature-settings:"case";
+		-ms-font-feature-settings:"case";
+		-webkit-font-feature-settings:"case";
+		font-feature-settings:"case";
+	}
+	span.alt69 {
+		-moz-font-feature-settings:"ss10=1";
+		-moz-font-feature-settings:"ss10";
+		-ms-font-feature-settings:"ss10";
+		-webkit-font-feature-settings:"ss10";
+		font-feature-settings:"ss10";
+	}
 /* Box Model */
 
 	*, *:before, *:after {
@@ -1818,7 +1832,7 @@
 				}
 
 			#content section header, #content article header {
-				border-top: solid 7px #2558AA;
+				border-top: dashed 3px #2558AA;
 				padding-top: 1em;
 				margin: 0 0 1.8em 0;
 			}
@@ -1873,7 +1887,7 @@
 				}
 
 			#sidebar section header {
-				border-top: solid 7px #2558AA;
+				border-top: dashed 3px #2558AA;
 				padding-top: 1.5em;
 				margin: 0 0 2em 0;
 			}

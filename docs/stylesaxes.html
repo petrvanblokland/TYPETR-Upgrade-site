@@ -54,16 +54,16 @@
 												</header>
 												<p>[Explaining the workings of interpolation, multiple master axes and variable fonts. There is a number of slides of previous presentations that can be used as illustrations here.]</p>
 												<img src="images/NoordzijCube-test-x-1000MMTranspUpgrade.gif" alt="NoordzijCube-test-x-1000MMTranspUpgrade.gif" width="100%"/>
-												<p>Gerrit Noordzij’s cube it based on a merge between expansion contrast (sharp nib pencil) and translation contrast (broad nib pencil). The type of contrast used in Upgrade is based on translation, with little difference between vertical thick and horizontal thin strokes. The animation (based on software by Just van Rossum’s <a href="http://dailydrawbot.tumblr.com" target="external">Daily Drawbot</a>) shows where the contrast principle of Upgrade is located in Noordzij’s cube.<br>Upgrade styles in this example are respectively: Light, Book, Regular, Semibold and Black.</p>   
+												<p>Gerrit Noordzij’s cube is based on a merge between expansion contrast (sharp nib pencil) and translation contrast (broad nib pencil). The type of contrast used in Upgrade is based on translation, with little difference between vertical thick and horizontal thin strokes. The animation (based on software by Just van Rossum’s <a href="http://dailydrawbot.tumblr.com" target="external">Daily Drawbot</a>) shows where the contrast principle of Upgrade is located in Noordzij’s cube.<br>Upgrade styles in this example are respectively: Light, Book, Regular, Semibold and Black.</p>   
 
 												<h3>Different drawings for different weights</h3>
 												<img src="images/glyphsbyweights.png" alt="glyphsbyweights.png" width="100%"/>
-												<p>Depending on the available space of stems and counts in the various weights, some characters have different drawings. There is not room for the vertical bar of dollar and cent to strike completely through. Note that although all weights are shown here (ranging from Hairline to UltraBlack), details in the extreme weights may not make them the best candidate to use them in this size.</p>
+												<p>Depending on the available space of stems and counts in the various weights, some characters have different drawings. There is no room for the vertical bar of dollar and cent to strike completely through. Note that although all weights are shown here (ranging from Hairline to UltraBlack), details in the extreme weights may not make them the best candidate to use them in this size.</p>
 
-												<h3>More variations in near future releases</h3>
+												<h3>More variations in the near future releases</h3>
 												<p>Soon more variations in the Upgrade family will be released, such as Upgrade Condensed, Upgrade Wide and Upgrade Text. And these variant will be combined, together with other parametric axes, in Upgrade Var. All these are intended to increase typographic quality for specific usage and size.</p>
 
-												<h3>Alternative styles, using the Upgrade family as template</h3>
+												<h3>Alternative styles, using the Upgrade family as a template</h3>
 												<p>Also planned is a number of variants that cannot easily be expressed in interpolating axis, needed for Variable Fonts. They have a more stylistic approach based on specific usage, where readibility it not the first priority. Projected example labels of these non-variable families: Upgrade Round, Upgrade Notouch, Upgrade Logo, Upgrade Ink and Upgrade Metal.</p>
 
 											</article>
@@ -88,21 +88,21 @@
 															<h3>Weight (wght)</h3>
 															<p>The default weight axis of Upgrade is made from 5 masters, to cover the extreme range between Upgrade Hairline and Upgrade UltraBlack.
 															<a href="documents/stackedTypePages.pdf" target="external"><img src="images/stackedTypePages.gif" class="spreadPageLeft" width="100%"></a>
-															Click on the animation to view a similar document as PDF.</p>
+															Click on the animation to view a similar document as <span class="c2sc">PDF</span>.</p>
 														</li>
 														<li>
 															<h3>How this animation was made</h3>
 															<p>This animated gif of 8 frames was made by <a href="scripts/stackedWords.py">this PageBot script</a>, working as follows: <br><br>
 
-															[1] Start a script in <em>DrawBot + PageBot</em> which takes a random selection from a list of words and then combines them in pairs. Each pair will fill a line.<br> 
-															[2] If the number of characters in a line is smaller than 12 characters – or otherwise with a chance of 10% – convert the line to capitals.<br>
-															[3] The stack of lines start on top of a page: put the cursor at the top-left corner of the margin.<br>
-															[4] Select a random weight from the TYPETR Upgrade family. There is a 20% chance that italics are selected.<br>
-															[5] Then calculate the point size needed, to make the line fit on the document page width.<br>
-															[6] Calculate the enclosing pixel box and move the cursor position vertical to the next line, increased by some leading.<br>
-															[7] Repeat this until the page is filled.<br>
-															[8] Then repeat this page squence for the required number of frames in the animation.<br>
-															[9] Save as PDF and as animated gif, with frame duration of 3 seconds.<br>
+															<span class="c2sc">[1]</span> Start a script in <em>DrawBot + PageBot</em> which takes a random selection from a list of words and then combines them in pairs. Each pair will fill a line.<br> 
+															<span class="c2sc">[2]</span> If the number of characters in a line is smaller than 12 characters – or otherwise with a chance of 10% – convert the line to capitals.<br>
+															<span class="c2sc">[3]</span> The stack of lines start on top of a page: put the cursor at the top-left corner of the margin.<br>
+															<span class="c2sc">[4]</span> Select a random weight from the TYPETR Upgrade family. There is a 20% chance that italics are selected.<br>
+															<span class="c2sc">[5]</span> Then calculate the point size needed, to make the line fit on the document page width.<br>
+															<span class="c2sc">[6]</span> Calculate the enclosing pixel box and move the cursor position vertical to the next line, increased by some leading.<br>
+															<span class="c2sc">[7]</span> Repeat this until the page is filled.<br>
+															<span class="c2sc">[8]</span> Then repeat this page squence for the required number of frames in the animation.<br>
+															<span class="c2sc">[9]</span> Save as <span class="c2sc">PDF</span> and as animated gif, with frame duration of 3 seconds.<br>
 															</p>
 														</li>
 														<li>
@@ -152,7 +152,7 @@
 														</li>
 														<li>
 															<h3>Programming typography (Oct 1-8)</h3>
-															In this intensive online workshop of one week, you will select one of your typographic projects and then ask yourself how the design and production could have been automated using your own scripts. And how much more alternatives you could have visualized. <a href="http://designdesign.space/#programming-typography" target="External">Read more...</a></p>
+															In this intensive online workshop of one week, you will select one of your typographic projects and then ask yourself how the design and production could have been automated, using your own scripts. And how much more alternatives you could have visualized. <a href="http://designdesign.space/#programming-typography" target="External">Read more...</a></p>
 														
 															<p>Or if you have more time and want to dive deeper into the subject of typographic algorithms, you may apply for this study of 4 weeks:</p>
 														</li>
