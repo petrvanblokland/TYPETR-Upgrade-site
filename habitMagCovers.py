@@ -42,11 +42,11 @@ def buildCoverPages1(w, h, year):
     y = h - MT
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=1)
+    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=1, rTracking=-0.02)
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=cw)  
     bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
     context.setShadow(shadow)
-    context.text(bs, (ML, y-bh))
+    context.text(bs, (w/2-(bw+bx)/2, y-bh))
     context.resetShadow()
 
     y = y - bh + by - LM
@@ -73,11 +73,11 @@ def buildCoverPages2(w, h, year):
     y = h - MT
     
     # Title of cover, make it fit in with and add shadow
-    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95))
+    coverTitleStyle = dict(font='Upgrade-Bold', fontSize=100, textFill=(0.85, 0.85, 1, 0.95), rTracking=-0.02)
     bs = context.newString(magazineTitle, style=coverTitleStyle, w=cw)  
     bx, by, bw, bh = bs.bounds() # by is negative amount under baseline. bh is amount above baseline.
     context.setShadow(shadow)
-    context.text(bs, (ML, y-bh))
+    context.text(bs, (w/2-(bw+bx)/2, y-bh))
     context.resetShadow()
 
     y = y - bh + by - LM
