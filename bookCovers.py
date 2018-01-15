@@ -114,7 +114,7 @@ def buildCoverPages2(w, h, v):
     
         # Title of cover, make it fit in with and add shadow
         coverTitleStyle = dict(font='Upgrade-Book', fontSize=100, textFill=1, rTracking=0.2, openTypeFeatures=dict(smcp=True) )
-        bs = context.newString('One Lightyear equals', style=coverTitleStyle, w=w-2*M)  
+        bs = context.newString('One Lightyear Equals', style=coverTitleStyle, w=w-2*M)  
         bx, by, bw, bh = bs.bounds()
         context.text(bs, (w/2-(bw+bx)/2, y-bh+by))
 
