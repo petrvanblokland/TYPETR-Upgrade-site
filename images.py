@@ -487,7 +487,7 @@ def image45st5th(w, h):
     fSize = w/4.5
     leading = fSize*1.3
     fs = FormattedString('42', font=fName, fontSize=fSize, fill=0)
-    fs +=  FormattedString('st', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
+    fs +=  FormattedString('nd', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
     fs +=  FormattedString(' 5', font=fName, fontSize=fSize, fill=0)
     fs +=  FormattedString('th\n', font=fName, fontSize=fSize, fill=0, openTypeFeatures=dict(sups=True))
     fs +=  FormattedString('C', font=fName, fontSize=fSize, fill=0, lineHeight=leading)
