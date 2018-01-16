@@ -93,34 +93,121 @@
 		-webkit-font-feature-settings:"sinf";
 		font-feature-settings:"sinf";
 	}
-	span.smcp {
+	.smcp {
 		-moz-font-feature-settings:"smcp=1";
 		-moz-font-feature-settings:"smcp";
 		-ms-font-feature-settings:"smcp";
 		-webkit-font-feature-settings:"smcp";
 		font-feature-settings:"smcp";
 	}
-	span.c2sc {
+	.c2sc {
 		-moz-font-feature-settings:"c2sc=1";
 		-moz-font-feature-settings:"c2sc";
 		-ms-font-feature-settings:"c2sc";
 		-webkit-font-feature-settings:"c2sc";
 		font-feature-settings:"c2sc";
 	}
-	span.case {
+	.pcap {
+		-moz-font-feature-settings:"pcap=1";
+		-moz-font-feature-settings:"pcap";
+		-ms-font-feature-settings:"pcap";
+		-webkit-font-feature-settings:"pcap";
+		font-feature-settings:"pcap";
+	}
+	.case {
 		-moz-font-feature-settings:"case=1";
 		-moz-font-feature-settings:"case";
 		-ms-font-feature-settings:"case";
 		-webkit-font-feature-settings:"case";
 		font-feature-settings:"case";
 	}
-	span.alt69 {
+	.alt69 { /* ss10 */
 		-moz-font-feature-settings:"ss10=1";
 		-moz-font-feature-settings:"ss10";
 		-ms-font-feature-settings:"ss10";
 		-webkit-font-feature-settings:"ss10";
 		font-feature-settings:"ss10";
 	}
+	.altg { /* ss09 */
+		-moz-font-feature-settings:"ss09=1";
+		-moz-font-feature-settings:"ss09";
+		-ms-font-feature-settings:"ss09";
+		-webkit-font-feature-settings:"ss09";
+		font-feature-settings:"ss09";
+	}
+	.baseJ { /* ss08 */
+		-moz-font-feature-settings:"ss08=1";
+		-moz-font-feature-settings:"ss08";
+		-ms-font-feature-settings:"ss08";
+		-webkit-font-feature-settings:"ss08";
+		font-feature-settings:"ss08";
+	}
+	.frac { 
+		-moz-font-feature-settings:"frac=1";
+		-moz-font-feature-settings:"frac";
+		-ms-font-feature-settings:"frac";
+		-webkit-font-feature-settings:"frac";
+		font-feature-settings:"frac";
+	}
+	.liga { 
+		-moz-font-feature-settings:"liga=1";
+		-moz-font-feature-settings:"liga";
+		-ms-font-feature-settings:"liga";
+		-webkit-font-feature-settings:"liga";
+		font-feature-settings:"liga";
+	}
+	.no_liga { 
+		-moz-font-feature-settings:"liga=0";
+		-moz-font-feature-settings:"";
+		-ms-font-feature-settings:"";
+		-webkit-font-feature-settings:"";
+		font-feature-settings:"";
+	}
+	.tnum { 
+		-moz-font-feature-settings:"tnum=1";
+		-moz-font-feature-settings:"tnum";
+		-ms-font-feature-settings:"tnum";
+		-webkit-font-feature-settings:"tnum";
+		font-feature-settings:"tnum";
+	}
+	.tnum { 
+		-moz-font-feature-settings:"pnum=1";
+		-moz-font-feature-settings:"pnum";
+		-ms-font-feature-settings:"pnum";
+		-webkit-font-feature-settings:"pnum";
+		font-feature-settings:"pnum";
+	}
+	.onum { 
+		-moz-font-feature-settings:"onum=1";
+		-moz-font-feature-settings:"onum";
+		-ms-font-feature-settings:"onum";
+		-webkit-font-feature-settings:"onum";
+		font-feature-settings:"onum";
+	}
+	.lnum { 
+		-moz-font-feature-settings:"lnum=1";
+		-moz-font-feature-settings:"lnum";
+		-ms-font-feature-settings:"lnum";
+		-webkit-font-feature-settings:"lnum";
+		font-feature-settings:"lnum";
+	}
+	.ordn { 
+		-moz-font-feature-settings:"ordn=1";
+		-moz-font-feature-settings:"ordn";
+		-ms-font-feature-settings:"ordn";
+		-webkit-font-feature-settings:"ordn";
+		font-feature-settings:"ordn";
+	}
+	.zero { 
+		-moz-font-feature-settings:"zero=1";
+		-moz-font-feature-settings:"zero";
+		-ms-font-feature-settings:"zero";
+		-webkit-font-feature-settings:"zero";
+		font-feature-settings:"zero";
+	}
+
+	/* [  'hwid',  'pcap', ] */
+
 /* Box Model */
 
 	*, *:before, *:after {
