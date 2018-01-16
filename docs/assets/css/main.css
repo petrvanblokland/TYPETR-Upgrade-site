@@ -79,14 +79,14 @@
 		border-bottom: solid 0.5px #808080;
 	}
 
-	sup {
+	sup, .sups {
 		-moz-font-feature-settings:"sups=1";
 		-moz-font-feature-settings:"sups";
 		-ms-font-feature-settings:"sups";
 		-webkit-font-feature-settings:"sups";
 		font-feature-settings:"sups";
 	}
-	sub {
+	sub, .sinf {
 		-moz-font-feature-settings:"sinf=1";
 		-moz-font-feature-settings:"sinf";
 		-ms-font-feature-settings:"sinf";
@@ -158,10 +158,10 @@
 	}
 	.no_liga { 
 		-moz-font-feature-settings:"liga=0";
-		-moz-font-feature-settings:"";
-		-ms-font-feature-settings:"";
-		-webkit-font-feature-settings:"";
-		font-feature-settings:"";
+		-moz-font-feature-settings:"liga" 0;
+		-ms-font-feature-settings:"liga" 0;
+		-webkit-font-feature-settings:"liga" 0;
+		font-feature-settings:"liga" 0;
 	}
 	.tnum { 
 		-moz-font-feature-settings:"tnum=1";
@@ -170,7 +170,7 @@
 		-webkit-font-feature-settings:"tnum";
 		font-feature-settings:"tnum";
 	}
-	.tnum { 
+	.pnum { 
 		-moz-font-feature-settings:"pnum=1";
 		-moz-font-feature-settings:"pnum";
 		-ms-font-feature-settings:"pnum";
