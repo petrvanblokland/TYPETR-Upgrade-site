@@ -1736,7 +1736,7 @@
 				width: 100%;
 				overflow: hidden;
 				box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.35);
-				height: 440px;
+				height: 400px;
 			}
 
 				#banner .nav-next, #banner .nav-previous {
@@ -1775,8 +1775,8 @@
 				}
 
 				#banner .nav-next {
-					bottom: 20px;
-					right: 20px;
+					bottom: 60px;
+					right: 60px;
 				}
 
 					#banner .nav-next:before {
@@ -1784,8 +1784,8 @@
 					}
 
 				#banner .nav-previous {
-					bottom: 20px;
-					right: 72px;
+					bottom: 60px;
+					right: 142px;
 				}
 
 					#banner .nav-previous:before {
@@ -2111,7 +2111,7 @@
 		/* Banner */
 
 			#banner {
-				height: 352px;
+				height: 280px;
 			}
 
 				#banner .nav-next {
@@ -2149,7 +2149,7 @@
 					}
 
 				#banner .slide img {
-					width: 1001px;
+					width: 1200px;
 				}
 
 		/* Content */
