@@ -2114,14 +2114,15 @@
 				height: 280px;
 			}
 
+
 				#banner .nav-next {
 					right: 10px;
-					bottom: 30px;
+					bottom: 90px;
 				}
 
 				#banner .nav-previous {
 					right: 62px;
-					bottom: 30px;
+					bottom: 90px;
 				}
 
 				#banner .captions {
