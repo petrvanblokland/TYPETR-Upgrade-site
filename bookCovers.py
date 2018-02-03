@@ -137,10 +137,10 @@ def buildCoverPages2(w, h, v):
         bx, by, bw, bh = bs.bounds()
         context.text(bs, (w*4/6+M, -by+3.2*M))
     
-        coverTitleStyle = dict(font='Upgrade-Regular', fontSize=100, textFill=c2, rTracking=0.2, rLeading=1, openTypeFeatures=dict(smcp=True) )
-        bs = context.newString('Matthew\nDow', style=coverTitleStyle, w=w/5)    
+        coverTitleStyle = dict(font='Upgrade-Regular', fontSize=100, textFill=c2, rTracking=0.2, rLeading=1.2, openTypeFeatures=dict(smcp=True) )
+        bs = context.newString('Design\nDesign\nSpace', style=coverTitleStyle, w=w/5)    
         bx, by, bw, bh = bs.bounds()
-        context.text(bs, (w*4/6+M, -by+1.5*M))
+        context.text(bs, (w*4/6+M, -by+0.75*M))
     
     
 
